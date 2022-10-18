@@ -1,0 +1,141 @@
+@font-face {
+  font-family: CalSans-SemiBold;
+  src: url(fonts/otf/CalSans-SemiBold.otf);
+}
+
+fontfam = 'CalSans-SemiBold', sans-serif;
+
+
+font-xs = 0.7em
+font-s = 1em
+font-m = 1.2em
+font-l = 1.4em
+font-xl = 2em
+font-xxl = 3em
+
+color-white = #ffffff
+color-black = #0000
+color-letter = #0000
+color-first = #0000
+color-second = #0000
+color-third = #0000
+
+
+movil = 'screen and (min-width: 576px)'
+tablet = 'screen and (min-width: 768px)'
+escritorio-s = 'screen and (min-width: 992px)'
+escritorio-m = 'screen and (min-width: 1200px)'
+escritorio-l = 'screen and (min-width: 1400px)'
+
+*
+  margin 0px
+  padding 0px
+  -webkit-box-sizing border-box!important
+  -moz-box-sizing border-box!important
+  box-sizing border-box!important
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+transform()
+  vendor('transform', arguments)  
+
+transition()
+  vendor('transition', arguments)
+
+//Colores
+
+.color-white
+  color color-white
+.color-black
+  color color-black
+.color-letter
+  color color-letter
+.color-first
+  color color-first
+.color-second
+  color color-second
+.color-third
+  color color-third
+
+
+.border-color-white
+  border-color color-white
+.border-color-black
+  border-color color-black
+.border-color-letter
+  border-color color-letter
+.border-color-first
+  border-color color-first
+.border-color-second
+  border-color color-second
+.border-color-third
+  border-color color-third
+
+
+.back-color-white
+  background-color color-white
+.back-color-black
+  background-color color-black
+.back-color-letter
+  background-color color-letter
+.back-color-first
+  background-color color-first
+.back-color-second
+  background-color color-second
+.back-color-third
+  background-color color-third
+
+//Letras
+
+.fontfam
+  font-family fontfam
+
+.font-xs
+  font-size font-xs
+.font-s
+  font-size font-s
+.font-m
+  font-size font-m
+.font-l
+  font-size font-l
+.font-xl
+  font-size font-xl
+.font-xxl
+  font-size font-xxl
+
+
+//Estilos
+
+body
+  color color-letter
+  font-family fontfam
+  font-size font-l
+
+.container
+  padding 0 20px
+  max-width 1024px
+  margin auto
+
+
+.main-header
+  height: 50vh
+  background  rgba(5, 6, 26, 0.966);
+  display: flex
+  justify-content: center
+  align-items: center
+  .input[type=text], select 
+    width: 50%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: fontfam
+    font-size: font-s
