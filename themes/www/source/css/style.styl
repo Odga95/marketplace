@@ -123,7 +123,7 @@ body
   max-width 1024px
   margin auto
 
-
+// Input buscador que va despues del header
 .main-header
   height: 50vh
   background  #110f1f;
@@ -147,6 +147,48 @@ body
   position: absolute
   width: 100%
   height: 100%
+
+// Estilo para el banner con fondo 
+.banner
+  width: 100%
+  height: 100%
+  padding 50px 120px
+  display: flex
+  justify-content: center
+  align-items: center
+  background  #ffffff;
+  
+  .banner__container
+    width: 100%
+    height: 100%
+    padding: 70px 0px 50px 60px
+    background-image: linear-gradient(135deg, #ffc500 0, #ebce00 7.14%, #d4d500 14.29%, #bbdc00 21.43%, #a0e100 28.57%, #82e600 35.71%, #5bea00 42.86%, #00ee0a 50%, #00f13c 57.14%, #00f35a 64.29%, #00f575 71.43%, #00f790 78.57%, #00f8aa 85.71%, #00f9c5 92.86%, #00fadf 100%);
+    border-radius 25px
+    .banner__container--Text
+      width: 60%
+      height 100%
+      color white
+      h2 
+        font-size font-m
+        margin-bottom: 10px
+      p
+        font-size font-s
+    .banner__button 
+      margin-top 50px
+      background: rgba(43, 43, 43, 0.938)
+      color white
+      width fit-content
+      padding: 10px 15px
+      margin-left: 40px
+      border-radius 5px
+      font-weight: 900
+      font-size font-xs
+
+
+
+
+
+
 
 @import 'header.styl';
 @import 'footer.styl';
