@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;900&display=swap');
 @font-face {
   font-family: CalSans-SemiBold;
-  src: url(fonts/otf/CalSans-SemiBold.otf);
+  src: url(../fonts/otf/CalSans-SemiBold.otf);
 }
 
-fontfam = 'CalSans-SemiBold', sans-serif;
+fontfam = 'Familjen Grotesk', sans-serif;
+fontfam1 = 'Fira Sans', sans-serif;
 
 
 font-xs = 0.6em
@@ -95,6 +97,8 @@ transition()
 
 .fontfam
   font-family fontfam
+.fontfam1
+  font-family fontfam1
 
 .font-xs
   font-size font-xs
@@ -114,9 +118,11 @@ transition()
 
 body
   color color-letter
-  font-family fontfam
+  font-family fontfam1
   font-size font-l
   position relative
+  h2,h3,h4,h5,h6
+    font-family: fontfam
 
 .container
   padding 0 20px
@@ -183,6 +189,116 @@ body
       border-radius 5px
       font-weight: 900
       font-size font-xs
+
+
+// Section Cards
+.cards-section
+  background: white
+.cards-section,.card-section-heading,.cards-group
+  width: 100%
+  height: 100%
+  padding: 70px 0px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  //Titulo y texto principal
+  .card-section-heading
+    padding 0px
+
+    .card-section-heading-title,.card-section-heading-text
+      color color-first
+      font-size: font-xl
+      text-align: center
+      margin-bottom: 20px
+    .card-section-heading-text
+      color color-letter
+      font-size: font-m
+
+  //Sección grupo de cards
+  .cards-group
+    padding: 10px 0px
+    flex-direction: row
+    position: relative
+    margin-top 20px
+    flex-wrap: wrap
+    gap: 20px
+    .card
+      margin-bottom: 30px !important
+      z-index: 1;
+      position: relative
+      background: white
+      border-radius 25px
+      width 250px
+      height 350px
+      align-items: left
+      justify-content: left
+      display: flex
+      flex-direction: column
+      margin: auto
+      padding 40px
+      .card-image
+        width 64px
+        height 64px
+        margin-bottom: 20px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      .card-title 
+        font-size: font-s
+        color color-first
+        margin-bottom: 20px
+      .card-text 
+        color color-letter
+        font-size: font-s
+        display -webkit-box
+        -webkit-line-clamp 5
+        line-height: 1.34
+        -webkit-box-orient vertical
+        overflow hidden
+        text-overflow ellipsis
+    .card:before {
+      border-radius 25px
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(-45deg, #ff00a2 0%, #0400ff 100% );
+      transform: translate3d(0px, 10px, 0) scale(0.95);
+      filter: blur(20px);
+      opacity: var(0.7);
+      transition: opacity 0.3s;
+    }
+    .card::after {
+      border-radius 25px
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+    }
+        
+
+
+
+      
+
+
+
+
+
+
+
+
+    
 
 
 
