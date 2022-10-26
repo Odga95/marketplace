@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;900&display=swap');
+@import url('https //fonts.googleapis.com/css2?family=Familjen+Grotesk wght@700&family=Fira+Sans wght@200900&display=swap')
 @font-face {
-  font-family: CalSans-SemiBold;
-  src: url(../fonts/otf/CalSans-SemiBold.otf);
+  font-family  CalSans-SemiBold
+  src  url(../fonts/otf/CalSans-SemiBold.otf)
 }
 
-fontfam = 'Familjen Grotesk', sans-serif;
-fontfam1 = 'Fira Sans', sans-serif;
+fontfam = 'Familjen Grotesk', sans-serif
+fontfam1 = 'Fira Sans', sans-serif
 
 
 font-xs = 0.6em
@@ -18,16 +18,16 @@ font-xxl = 2.8em
 color-white = #ffffff
 color-black = #0000
 color-letter = rgb(83, 83, 83)
-color-first = #110f1f;
+color-first = #110f1f
 color-second = rgba(155, 160, 255, 0.966)
 color-third = rgba(61, 67, 177, 0.966)
 
 
-movil = 'screen and (min-width: 576px)'
-tablet = 'screen and (min-width: 768px)'
-escritorio-s = 'screen and (min-width: 992px)'
-escritorio-m = 'screen and (min-width: 1200px)'
-escritorio-l = 'screen and (min-width: 1400px)'
+movil = 'screen and (min-width  576px)'
+tablet = 'screen and (min-width  768px)'
+escritorio-s = 'screen and (min-width  992px)'
+escritorio-m = 'screen and (min-width  1200px)'
+escritorio-l = 'screen and (min-width  1400px)'
 
 *
   margin 0px
@@ -121,8 +121,9 @@ body
   font-family fontfam1
   font-size font-l
   position relative
+  user-select  none
   h2,h3,h4,h5,h6
-    font-family: fontfam
+    font-family  fontfam
 
 .container
   padding 0 20px
@@ -131,77 +132,77 @@ body
 
 // Input buscador que va despues del header
 .main-header
-  height: 50vh
-  background  #110f1f;
-  display: flex
-  justify-content: center
-  align-items: center
+  height  50vh
+  background  #110f1f
+  display  flex
+  justify-content  center
+  align-items  center
   opacity 0.94
   .input[type=text], select 
-    width: 50%;
-    padding: 20px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: fontfam
-    font-size: font-s
+    width  50%
+    padding  20px 20px
+    margin  8px 0
+    display  inline-block
+    border  1px solid #ccc
+    border-radius  4px
+    box-sizing  border-box
+    font-family  fontfam
+    font-size  font-s
 #canvas
-  z-index: -1
-  display: flex
-  position: absolute
-  width: 100%
-  height: 100%
+  z-index  -1
+  display  flex
+  position  absolute
+  width  100%
+  height  100%
 
 // Estilo para el banner con fondo 
 .banner
-  width: 100%
-  height: 100%
+  width  100%
+  height  100%
   padding 50px 120px
-  display: flex
-  justify-content: center
-  align-items: center
-  background  #ffffff;
+  display  flex
+  justify-content  center
+  align-items  center
+  background  #ffffff
   
   .banner__container
-    width: 100%
-    height: 100%
-    padding: 70px 0px 50px 60px
-    background-image: linear-gradient(135deg, #ffc500 0, #ebce00 7.14%, #d4d500 14.29%, #bbdc00 21.43%, #a0e100 28.57%, #82e600 35.71%, #5bea00 42.86%, #00ee0a 50%, #00f13c 57.14%, #00f35a 64.29%, #00f575 71.43%, #00f790 78.57%, #00f8aa 85.71%, #00f9c5 92.86%, #00fadf 100%);
+    width  100%
+    height  100%
+    padding  70px 0px 50px 60px
+    background-image  linear-gradient(135deg, #ffc500 0, #ebce00 7.14%, #d4d500 14.29%, #bbdc00 21.43%, #a0e100 28.57%, #82e600 35.71%, #5bea00 42.86%, #00ee0a 50%, #00f13c 57.14%, #00f35a 64.29%, #00f575 71.43%, #00f790 78.57%, #00f8aa 85.71%, #00f9c5 92.86%, #00fadf 100%)
     border-radius 25px
     .banner__container--Text
-      width: 60%
+      width  60%
       height 100%
       color white
       h2 
         font-size font-m
-        margin-bottom: 10px
+        margin-bottom  10px
       p
         font-size font-s
     .banner__button 
       margin-top 50px
-      background: rgba(43, 43, 43, 0.938)
+      background  rgba(43, 43, 43, 0.938)
       color white
       width fit-content
-      padding: 10px 15px
-      margin-left: 40px
+      padding  10px 15px
+      margin-left  40px
       border-radius 5px
-      font-weight: 900
+      font-weight  900
       font-size font-xs
 
 
 // Section Cards
 .cards-section
-  background: white
+  background  white
 .cards-section,.card-section-heading,.cards-group
-  width: 100%
-  height: 100%
-  padding: 70px 0px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  width  100%
+  height  100%
+  padding  70px 0px
+  display  flex
+  flex-direction  column
+  justify-content  center
+  align-items  center
 
   //Titulo y texto principal
   .card-section-heading
@@ -209,102 +210,241 @@ body
 
     .card-section-heading-title,.card-section-heading-text
       color color-first
-      font-size: font-xl
-      text-align: center
-      margin-bottom: 20px
+      font-size  font-xl
+      text-align  center
+      margin-bottom  20px
     .card-section-heading-text
       color color-letter
-      font-size: font-m
+      font-size  font-m
 
   //Sección grupo de cards
   .cards-group
-    padding: 10px 0px
-    flex-direction: row
-    position: relative
+    padding  10px 0px
+    flex-direction  row
+    position  relative
     margin-top 20px
-    flex-wrap: wrap
-    gap: 20px
+    flex-wrap  wrap
+    gap  20px
     .card
-      margin-bottom: 30px !important
-      z-index: 1;
-      position: relative
-      background: white
+      margin-bottom  30px !important
+      z-index  1
+      position  relative
+      background  white
       border-radius 25px
       width 250px
       height 350px
-      align-items: left
-      justify-content: left
-      display: flex
-      flex-direction: column
-      margin: auto
+      align-items  left
+      justify-content  left
+      display  flex
+      flex-direction  column
+      margin  auto
       padding 40px
       .card-image
         width 64px
         height 64px
-        margin-bottom: 20px
+        margin-bottom  20px
         img
-          width: 100%
-          height: 100%
-          object-fit: cover
+          width  100%
+          height  100%
+          object-fit  cover
       .card-title 
-        font-size: font-s
+        font-size  font-s
         color color-first
-        margin-bottom: 20px
+        margin-bottom  20px
       .card-text 
         color color-letter
-        font-size: font-s
+        font-size  font-s
         display -webkit-box
         -webkit-line-clamp 5
-        line-height: 1.34
+        line-height  1.34
         -webkit-box-orient vertical
         overflow hidden
         text-overflow ellipsis
-    .card:before {
+    .card:before
       border-radius 25px
-      content: "";
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(-45deg, #ff00a2 0%, #0400ff 100% );
-      transform: translate3d(0px, 10px, 0) scale(0.95);
-      filter: blur(20px);
-      opacity: var(0.7);
-      transition: opacity 0.3s;
-    }
-    .card::after {
+      content  ""
+      z-index  -1
+      position  absolute
+      top  0
+      right  0
+      bottom  0
+      left  0
+      background  linear-gradient(-45deg, #ff00a2 0%, #0400ff 100% )
+      transform  translate3d(0px, 10px, 0) scale(0.95)
+      filter  blur(20px)
+      opacity  var(0.7)
+      transition  opacity 0.3s
+  
+    .card:after
       border-radius 25px
-      content: "";
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: inherit;
-    }
-        
+      content  ""
+      z-index  -1
+      position  absolute
+      top  0
+      right  0
+      bottom  0
+      left  0
+      background  inherit
+  
+
+//Slider 
+//Contenedor slider
+.slide
+  width  100%
+  height  auto
+  background  color-white
+  overflow  hidden
+
+//Ocultar los radioinput
+[type=radio] 
+  display  none
+
+#slider 
+  height  65vw
+  position  relative
+  perspective  1000px
+  transform-style  preserve-3d
+
+
+#slider label 
+  margin  auto
+  border-radius  25px
+  position  absolute
+  left  0 
+  right  0
+  cursor  pointer
+  transition  transform 0.4s ease
+
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 
+  box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
+  transform  translate3d(-150%,0,-300px)
+
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 
+  box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
+  transform  translate3d(-85%,0,-200px)
+  top 2%
+
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 
+  box-shadow  0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19)
+  transform  translate3d(0,0,0)
+  top 6%
+ 
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 
+  box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
+  transform  translate3d(75%,0,-200px)
+  top 2%
+
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 
+  box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
+  transform  translate3d(150%,0,-300px)
+
+
+.mkt-3dSlider
+  background  #333e48 
+  padding  72px 0 
+
+.mkt-3dSlider-title 
+  color  #fff
+  margin  0 auto
+  text-align  center
+  margin-bottom  24px
+
+
+.mkt-3dSlider-description 
+  color  #fff
+  text-align  center
+  margin-bottom  48px
+
+
+.card-slider 
+  background  #fff
+  max-width 300px
+  height  450px
+  border-radius 25px
+  position: relative
+  .label-container
+    width 100%
+    height 100%
+    display: flex
+    flex-direction: column
+    z-index 0
+    position: relative
+    .icon
+      position: absolute
+      top 20px
+      left: auto
+      right: 30px
+      color rgb(194, 194, 194)
+    .image
+      width: 100%
+      height: fit-content
+      img
+        width: 100%
+        height: 250px
+        object-fit: cover
+        border-start-end-radius: 25px
+        border-start-start-radius: 25px
+    .text
+      padding: 20px
+      font-size font-s
+      h3
+        margin-bottom: 10px
+      p
+        font-size font-s
+        display -webkit-box
+        -webkit-line-clamp 2
+        line-height  1.34
+        -webkit-box-orient vertical
+        overflow hidden
+        text-overflow ellipsis
 
 
 
-      
+  .banner-bottom
+    z-index 0
+    position: absolute
+    width: 100%
+    height: 70px
+    background: black
+    bottom 0
+    left 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-end-end-radius: 25px
+    border-end-start-radius: 25px
+    padding: 0px 20px
+    .stars
+      ul
+        display: flex
+        li
+          list-style: none
+          .fa-solid
+            color rgb(252, 193, 0)
+    .price
+      color #fff
+      text-decoration: none
+      transition 0.2s
+    .price:hover
+      color rgb(144, 173, 255)
 
 
 
 
 
-
-
-
-    
-
-
-
-
-
-
-
-@import 'header.styl';
-@import 'footer.styl';
+@import 'header.styl'
+@import 'footer.styl'
