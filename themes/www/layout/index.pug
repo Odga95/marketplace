@@ -3,74 +3,109 @@ extends includes/layout
 block body-header
   include includes/header
 
+block head-link
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 block body-main
   .main-header
     input.input(type="text" id="fname" name="firstname" placeholder="Escribe una palabra clave")
-
+  //- Images links templates
+  .section-group-sliders
+    .container
+      .group-sliders
+        .first-slider
+          .image 
+            img(src="/img/plantilla5.webp", alt="")
+          a(href="/").button 
+        .second-slider
+          .image 
+            img(src="/img/plantilla2.jpg", alt="")
+          a(href="/").button 
+        .third-slider
+          .image 
+            img(src="/img/plantilla3.webp", alt="")
+          a(href="/").button 
+        .fourth-slider
+          .image 
+            img(src="/img/plantilla4.jpg", alt="")
+          a(href="/").button 
+        .fifth-slider
+          .image 
+            img(src="/img/plantilla1.jpg", alt="")
+          a(href="/").button 
   //- Cards
-  .cards-section 
-    .container 
+  .cards-section
+    .container
       .card-section-heading
         .card-section-heading-title
           //- Title section cards
           h2 Construye los mejores sitios web para posicionar tu marca
         .card-section-heading-text
           //- Text section cards
-          p Explora nuevos estilos utilizando nuestras plantillas en marketplace, encuentra las pantillas que inspiren tu proyecto emprendedor 
+          p Explora nuevos estilos utilizando nuestras plantillas en marketplace, encuentra las pantillas que inspiren tu proyecto emprendedor
       .cards-group
         .card.box
-          .card-image 
+          .card-image
             img(src="/img/icon (1).png" alt="")
-          .card-title 
+          .card-title
             h3 Site Optimisation.
-          .card-text 
+          .card-text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercita
         .card.box
-          .card-image 
+          .card-image
             img(src="/img/icon (2).png" alt="")
-          .card-title 
+          .card-title
             h3 Site adipisicing sit.
-          .card-text 
+          .card-text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercitationem consequatur? Autem debitis incidunt deserunt eaque sed sunt aspernatur. Blanditiis, ullam.
         .card.box
-          .card-image 
+          .card-image
             img(src="/img/icon (3).png" alt="")
-          .card-title 
+          .card-title
             h3 Blanditiis ullam consectetur.
-          .card-text 
+          .card-text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercitationem consequatur? Autem debitis incidunt deserunt eaque sed sunt aspernatur. Blanditiis, ullam.
-  .slide
-    section#slider
-      input.card-slider(type="radio" name="slider" id="s1" checked)
-      input.card-slider(type="radio" name="slider" id="s2")
-      input.card-slider(type="radio" name="slider" id="s3")
-      input.card-slider(type="radio" name="slider" id="s4")
-      input.card-slider(type="radio" name="slider" id="s5")
-      label(for="s1" id="slide1" class="card-slider")
-        .label-container
-          .icon
-            .fa-solid.fa-heart
-          .image
-            img(src="/img/plantilla.png", alt="", srcset="")
-          .text
-            h3 Blanditiis ullam consectetur.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercitationem consequatur? Autem debitis incidunt deserunt eaque sed sunt aspernatur. Blanditiis, ullam.
-        .banner-bottom
-          .stars
-            - var stars = 5;
-            - var n = 0;
-            ul 
-              while n < stars
-                li
-                  .fa-solid.fa-star.fa-xs
-                - n++
-          a(href="http://").price (35,00 €)
+        .card.box
+          .card-image
+            img(src="/img/icon (1).png" alt="")
+          .card-title
+            h3 Site Optimisation.
+          .card-text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercita
 
-          
-      label(for="s2" id="slide2" class="card-slider")
-      label(for="s3" id="slide3" class="card-slider")
-      label(for="s4" id="slide4" class="card-slider")
-      label(for="s5" id="slide5" class="card-slider")
+
+
+  //- .slide
+  //-   section#slider
+  //-     input.card-slider(type="radio" name="slider" id="s1" checked)
+  //-     input.card-slider(type="radio" name="slider" id="s2")
+  //-     input.card-slider(type="radio" name="slider" id="s3")
+  //-     input.card-slider(type="radio" name="slider" id="s4")
+  //-     input.card-slider(type="radio" name="slider" id="s5")
+  //-     label(for="s1" id="slide1" class="card-slider")
+  //-       .label-container
+  //-         .icon
+  //-           .fa-solid.fa-heart
+  //-         .image
+  //-           img(src="/img/plantilla.png" alt="" srcset="")
+  //-         .text
+  //-           h3 Blanditiis ullam consectetur.
+  //-           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercitationem consequatur? Autem debitis incidunt deserunt eaque sed sunt aspernatur. Blanditiis, ullam.
+  //-       .banner-bottom
+  //-         .stars
+  //-           - var stars = 5;
+  //-           - var n = 0;
+  //-           ul
+  //-             while n < stars
+  //-               li
+  //-                 .fa-solid.fa-star.fa-xs
+  //-               - n++
+  //-         a(href="http://").price (35,00 €)
+
+
+  //-     label(for="s2" id="slide2" class="card-slider")
+  //-     label(for="s3" id="slide3" class="card-slider")
+  //-     label(for="s4" id="slide4" class="card-slider")
+  //-     label(for="s5" id="slide5" class="card-slider")
 
 
 
@@ -81,9 +116,11 @@ block body-main
   //-         img(src="" alt="" srcset="")
   //-       .banner__container--Text
   //-         h2 Explora nuevos estilos utilizando nuestras plantillas en marketplace.
-  //-         p Sin pagos adicionales 
-  //-       .banner__button 
+  //-         p Sin pagos adicionales
+  //-       .banner__button
   //-         p Explorar plantillas
 
 block body-footer
   include includes/footer
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+  script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")

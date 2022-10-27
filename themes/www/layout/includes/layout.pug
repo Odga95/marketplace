@@ -7,7 +7,7 @@ html(lang='es')
 
     block head-title
 
-    link(href='/favicon.ico' type='image/x-icon' rel='shortcut icon')
+    //- link(href='/favicon.ico' type='image/x-icon' rel='shortcut icon')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
     link(href='https://fonts.googleapis.com/css2?family=Aclonica&family=Josefin+Sans:wght@300&display=swap' rel='stylesheet')
@@ -16,16 +16,19 @@ html(lang='es')
     link(rel='stylesheet' href='/css/custom.css')
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    
   body
     canvas#canvas 
     block body-header
+    block head-link
     block body-main
     block body-footer
-    script(type='application/javascript').
-      var apiUrl = !{JSON.stringify(config.apiUrl)};
-      var siteId = !{JSON.stringify(config.site)};
-      var contactUrl = apiUrl + '/sites/' + siteId + '/contact';
-      console.log(contactUrl);
+
+    //- script(type='application/javascript').
+    //-   var apiUrl = !{JSON.stringify(config.apiUrl)};
+    //-   var siteId = !{JSON.stringify(config.site)};
+    //-   var contactUrl = apiUrl + '/sites/' + siteId + '/contact';
+    //-   console.log(contactUrl);
 
     script(src='/js/general.js')
     

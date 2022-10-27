@@ -1,21 +1,21 @@
-@import url('https //fonts.googleapis.com/css2?family=Familjen+Grotesk wght@700&family=Fira+Sans wght@200900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;900&display=swap');
 @font-face {
   font-family  CalSans-SemiBold
   src  url(../fonts/otf/CalSans-SemiBold.otf)
 }
 
-fontfam = 'Familjen Grotesk', sans-serif
-fontfam1 = 'Fira Sans', sans-serif
+fontfam = 'Familjen Grotesk', sans-serif;
+fontfam1 = 'Fira Sans', sans-serif;
 
 
 font-xs = 0.6em
-font-s = 0.8em
+font-s = 0.7em
 font-m = 1.1em
 font-l = 1.3em
 font-xl = 1.8em
 font-xxl = 2.8em
 
-color-white = #ffffff
+color-white = #ffff
 color-black = #0000
 color-letter = rgb(83, 83, 83)
 color-first = #110f1f
@@ -127,7 +127,7 @@ body
 
 .container
   padding 0 20px
-  max-width 1024px
+  max-width 1200px
   margin auto
 
 // Input buscador que va despues del header
@@ -207,7 +207,6 @@ body
   //Titulo y texto principal
   .card-section-heading
     padding 0px
-
     .card-section-heading-title,.card-section-heading-text
       color color-first
       font-size  font-xl
@@ -224,21 +223,23 @@ body
     position  relative
     margin-top 20px
     flex-wrap  wrap
-    gap  20px
+    gap 20px
+    //Diseño del card
     .card
       margin-bottom  30px !important
       z-index  1
       position  relative
       background  white
-      border-radius 25px
-      width 250px
-      height 350px
+      width 220px
+      height 320px
       align-items  left
       justify-content  left
       display  flex
       flex-direction  column
       margin  auto
-      padding 40px
+      padding 30px
+      transition 0.25s
+      //Tamaño del icono del card
       .card-image
         width 64px
         height 64px
@@ -247,6 +248,7 @@ body
           width  100%
           height  100%
           object-fit  cover
+      //Diseño y tamaño del texto y el titulo del card
       .card-title 
         font-size  font-s
         color color-first
@@ -260,8 +262,8 @@ body
         -webkit-box-orient vertical
         overflow hidden
         text-overflow ellipsis
+    //Sombra de colores gradiente para el card
     .card:before
-      border-radius 25px
       content  ""
       z-index  -1
       position  absolute
@@ -274,9 +276,9 @@ body
       filter  blur(20px)
       opacity  var(0.7)
       transition  opacity 0.3s
-  
+
     .card:after
-      border-radius 25px
+      border-radius 15px
       content  ""
       z-index  -1
       position  absolute
@@ -285,162 +287,218 @@ body
       bottom  0
       left  0
       background  inherit
-  
+     //Hover card
+    .card:hover
+      transform scale(1.1)
+      
 
-//Slider 
-//Contenedor slider
-.slide
-  width  100%
-  height  auto
-  background  color-white
-  overflow  hidden
+//Diseño para todas las secciones
 
-//Ocultar los radioinput
-[type=radio] 
-  display  none
-
-#slider 
-  height  65vw
-  position  relative
-  perspective  1000px
-  transform-style  preserve-3d
-
-
-#slider label 
-  margin  auto
-  border-radius  25px
-  position  absolute
-  left  0 
-  right  0
-  cursor  pointer
-  transition  transform 0.4s ease
-
-
-#s1:checked ~ #slide4, #s2:checked ~ #slide5,
-#s3:checked ~ #slide1, #s4:checked ~ #slide2,
-#s5:checked ~ #slide3 
-  box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
-  transform  translate3d(-150%,0,-300px)
-
-
-#s1:checked ~ #slide5, #s2:checked ~ #slide1,
-#s3:checked ~ #slide2, #s4:checked ~ #slide3,
-#s5:checked ~ #slide4 
-  box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
-  transform  translate3d(-85%,0,-200px)
-  top 2%
-
-
-#s1:checked ~ #slide1, #s2:checked ~ #slide2,
-#s3:checked ~ #slide3, #s4:checked ~ #slide4,
-#s5:checked ~ #slide5 
-  box-shadow  0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19)
-  transform  translate3d(0,0,0)
-  top 6%
- 
-#s1:checked ~ #slide2, #s2:checked ~ #slide3,
-#s3:checked ~ #slide4, #s4:checked ~ #slide5,
-#s5:checked ~ #slide1 
-  box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
-  transform  translate3d(75%,0,-200px)
-  top 2%
-
-
-#s1:checked ~ #slide3, #s2:checked ~ #slide4,
-#s3:checked ~ #slide5, #s4:checked ~ #slide1,
-#s5:checked ~ #slide2 
-  box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
-  transform  translate3d(150%,0,-300px)
-
-
-.mkt-3dSlider
-  background  #333e48 
-  padding  72px 0 
-
-.mkt-3dSlider-title 
-  color  #fff
-  margin  0 auto
-  text-align  center
-  margin-bottom  24px
-
-
-.mkt-3dSlider-description 
-  color  #fff
-  text-align  center
-  margin-bottom  48px
-
-
-.card-slider 
-  background  #fff
-  max-width 300px
-  height  450px
-  border-radius 25px
-  position: relative
-  .label-container
-    width 100%
-    height 100%
-    display: flex
-    flex-direction: column
-    z-index 0
-    position: relative
-    .icon
-      position: absolute
-      top 20px
-      left: auto
-      right: 30px
-      color rgb(194, 194, 194)
-    .image
-      width: 100%
-      height: fit-content
-      img
-        width: 100%
-        height: 250px
-        object-fit: cover
-        border-start-end-radius: 25px
-        border-start-start-radius: 25px
-    .text
-      padding: 20px
-      font-size font-s
-      h3
-        margin-bottom: 10px
-      p
-        font-size font-s
-        display -webkit-box
-        -webkit-line-clamp 2
-        line-height  1.34
-        -webkit-box-orient vertical
-        overflow hidden
-        text-overflow ellipsis
-
-
-
-  .banner-bottom
-    z-index 0
-    position: absolute
+.section-group-sliders
+  width: 100%
+  height: 100%
+  background: color-white
+  padding: 50px 20px
+  .group-sliders
     width: 100%
-    height: 70px
-    background: black
-    bottom 0
-    left 0
+    background: color-white
     display: flex
-    justify-content: space-between
-    align-items: center
-    border-end-end-radius: 25px
-    border-end-start-radius: 25px
-    padding: 0px 20px
-    .stars
-      ul
-        display: flex
-        li
-          list-style: none
-          .fa-solid
-            color rgb(252, 193, 0)
-    .price
-      color #fff
-      text-decoration: none
-      transition 0.2s
-    .price:hover
-      color rgb(144, 173, 255)
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    .first-slider,
+    .second-slider
+      height: 300px
+    .first-slider
+      width: 60%
+      padding 20px
+    .second-slider
+      width: 40%
+      padding: 20px
+    .third-slider,
+    .fourth-slider,
+    .fifth-slider
+      padding: 20px
+      width: 33%
+      height: 250px
+    .first-slider,
+    .second-slider,
+    .third-slider,
+    .fourth-slider,
+    .fifth-slider
+      .image
+        width: 100%
+        height: 100%
+        background: white
+      
+        img
+          -webkit-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
+          -moz-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
+          box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
+          border-radius 25px
+          width 100%
+          height 100%
+          transition 0.2s
+          object-fit cover
+        img:hover
+          width: 100%
+          transform scale(1.1)
+
+
+// //Slider 
+// //Contenedor slider
+// .slide
+//   width  100%
+//   height  auto
+//   background  color-white
+//   overflow  hidden
+
+// //Ocultar los radioinput
+// [type=radio] 
+//   display  none
+
+// #slider 
+//   height  65vw
+//   position  relative
+//   perspective  1000px
+//   transform-style  preserve-3d
+
+
+// #slider label 
+//   margin  auto
+//   border-radius  25px
+//   position  absolute
+//   left  0 
+//   right  0
+//   cursor  pointer
+//   transition  transform 0.4s ease
+
+
+// #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+// #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+// #s5:checked ~ #slide3 
+//   box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
+//   transform  translate3d(-150%,0,-300px)
+
+
+// #s1:checked ~ #slide5, #s2:checked ~ #slide1,
+// #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+// #s5:checked ~ #slide4 
+//   box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
+//   transform  translate3d(-85%,0,-200px)
+//   top 2%
+
+
+// #s1:checked ~ #slide1, #s2:checked ~ #slide2,
+// #s3:checked ~ #slide3, #s4:checked ~ #slide4,
+// #s5:checked ~ #slide5 
+//   box-shadow  0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19)
+//   transform  translate3d(0,0,0)
+//   top 6%
+ 
+// #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+// #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+// #s5:checked ~ #slide1 
+//   box-shadow  0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2)
+//   transform  translate3d(75%,0,-200px)
+//   top 2%
+
+
+// #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+// #s3:checked ~ #slide5, #s4:checked ~ #slide1,
+// #s5:checked ~ #slide2 
+//   box-shadow  0 1px 4px 0 rgba(0,0,0,.37)
+//   transform  translate3d(150%,0,-300px)
+
+
+// .mkt-3dSlider
+//   background  #333e48 
+//   padding  72px 0 
+
+// .mkt-3dSlider-title 
+//   color  #fff
+//   margin  0 auto
+//   text-align  center
+//   margin-bottom  24px
+
+
+// .mkt-3dSlider-description 
+//   color  #fff
+//   text-align  center
+//   margin-bottom  48px
+
+
+// .card-slider 
+//   background  #fff
+//   max-width 300px
+//   height  450px
+//   border-radius 25px
+//   position: relative
+//   .label-container
+//     width 100%
+//     height 100%
+//     display: flex
+//     flex-direction: column
+//     z-index 0
+//     position: relative
+//     .icon
+//       position: absolute
+//       top 20px
+//       left: auto
+//       right: 30px
+//       color rgb(194, 194, 194)
+//     .image
+//       width: 100%
+//       height: fit-content
+//       img
+//         width: 100%
+//         height: 250px
+//         object-fit: cover
+//         border-start-end-radius: 25px
+//         border-start-start-radius: 25px
+//     .text
+//       padding: 20px
+//       font-size font-s
+//       h3
+//         margin-bottom: 10px
+//       p
+//         font-size font-s
+//         display -webkit-box
+//         -webkit-line-clamp 2
+//         line-height  1.34
+//         -webkit-box-orient vertical
+//         overflow hidden
+//         text-overflow ellipsis
+
+
+
+//   .banner-bottom
+//     z-index 0
+//     position: absolute
+//     width: 100%
+//     height: 70px
+//     background: black
+//     bottom 0
+//     left 0
+//     display: flex
+//     justify-content: space-between
+//     align-items: center
+//     border-end-end-radius: 25px
+//     border-end-start-radius: 25px
+//     padding: 0px 20px
+//     .stars
+//       ul
+//         display: flex
+//         li
+//           list-style: none
+//           .fa-solid
+//             color rgb(252, 193, 0)
+//     .price
+//       color #fff
+//       text-decoration: none
+//       transition 0.2s
+//     .price:hover
+//       color rgb(144, 173, 255)
 
 
 
