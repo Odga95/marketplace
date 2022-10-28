@@ -9,29 +9,6 @@ block body-main
   .main-header
     input.input(type="text" id="fname" name="firstname" placeholder="Escribe una palabra clave")
   //- Images links templates
-  .section-group-sliders
-    .container
-      .group-sliders
-        .first-slider
-          .image 
-            img(src="/img/plantilla5.webp", alt="")
-          a(href="/").button 
-        .second-slider
-          .image 
-            img(src="/img/plantilla2.jpg", alt="")
-          a(href="/").button 
-        .third-slider
-          .image 
-            img(src="/img/plantilla3.webp", alt="")
-          a(href="/").button 
-        .fourth-slider
-          .image 
-            img(src="/img/plantilla4.jpg", alt="")
-          a(href="/").button 
-        .fifth-slider
-          .image 
-            img(src="/img/plantilla1.jpg", alt="")
-          a(href="/").button 
   //- Cards
   .cards-section
     .container
@@ -71,7 +48,87 @@ block body-main
             h3 Site Optimisation.
           .card-text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam nobis accusamus rem dolores eligendi nam necessitatibus quae exercita
+  //- Cards Category
+  .category
+    .container
+      //- Contenedor - category
+      .category-container
+        //- Titulo y botón de view All
+        hr
+        .category-heading
+          //- Titulo de la sección
+        
+          .category-text
+            h2 Busca por - Categorias
+          //- Botón a sección de las categorías
+          .category-button
+            a(href="/").button Ver más...
+            a(href="/").text Ver más...
+          //- Linea de división o separación del heading
+        hr
+        //- Sección de las categorías
+        .category-categories
+          //- Diseño de las cards para las categorías
+          //- icono y titulo del card
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/sport.png", alt="", srcset="")
+            .category-title
+              h3 Sport
 
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/music.png", alt="", srcset="")
+            .category-title
+              h3 Music
+
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/dark.png", alt="", srcset="")
+            .category-title
+              h3 Dark
+
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/collage.png", alt="", srcset="")
+            .category-title
+              h3 Collage
+
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/art.png", alt="", srcset="")
+            .category-title
+              h3 Art
+
+          a(href="/").category-card
+            .category-icon
+              img(src="/img/gradient.png", alt="", srcset="")
+            .category-title
+              h3 Gradiente
+
+  .section-group-sliders
+    .container
+      .group-sliders
+        .first-slider
+          .image 
+            img(src="/img/plantilla5.webp" alt="")
+          a(href="/").button 
+        .second-slider
+          .image 
+            img(src="/img/plantilla2.jpg" alt="")
+          a(href="/").button 
+        .third-slider
+          .image 
+            img(src="/img/plantilla3.webp" alt="")
+          a(href="/").button 
+        .fourth-slider
+          .image 
+            img(src="/img/plantilla4.jpg" alt="")
+          a(href="/").button 
+        .fifth-slider
+          .image 
+            img(src="/img/plantilla1.jpg" alt="")
+          a(href="/").button 
 
 
   //- .slide

@@ -127,7 +127,7 @@ body
 
 .container
   padding 0 20px
-  max-width 1200px
+  max-width 1024px
   margin auto
 
 // Input buscador que va despues del header
@@ -330,7 +330,6 @@ body
         width: 100%
         height: 100%
         background: white
-      
         img
           -webkit-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
           -moz-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
@@ -344,6 +343,123 @@ body
           width: 100%
           transform scale(1.1)
 
+// Category
+.category
+  width: 100%
+  height: 100%
+  background: color-white
+
+  //Contenedor - category
+  .category-container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 50px 0px
+
+    //Titulo y botón de view All
+    .category-heading
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px 0px 
+      width: 100%
+
+      //Titulo de la sección
+      .category-text
+        color color-first
+        font-size: font-m
+        font-weight: 700
+        h2
+          display: flex
+          justify-content: center
+          align-items: center
+      //Botón a sección de las categorías
+      .category-button
+        width: 100px
+        height: 100%
+        position relative
+        .button
+          text-decoration: none
+          color color-white
+          font-weight: 700
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 8px 12px
+          background: linear-gradient(90deg, rgba(255,0,185,0.5) 0%, rgba(188,0,255,0.5) 37%, rgba(0,5,255,0.5) 99%);       
+          border-radius: 4px
+          transition: 0.5s
+          font-size: font-s
+        .text
+          text-decoration: none
+          width: fit-content
+          position: absolute
+          font-size: font-s
+          color color-white
+          font-weight: 700
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 70px
+          text-align: center
+
+      .category-button:hover .button
+        filter: blur(4px)
+
+      // Linea de división o separación del heading
+    hr 
+      width: 100%
+      margin auto
+      height: 8px;
+      background: rgba(128, 128, 128, 0.356)
+      border: 0;
+      height: 1px;
+
+    // Sección de las categorías
+    .category-categories
+      width 100%
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      padding: 40px 0px 50px 0px
+      
+      // Diseño de las cards para las categorías
+      .category-card
+        width: 120px
+        padding: 30px 20px
+        -webkit-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
+        -moz-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
+        box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius 10px
+        text-decoration: none
+        margin-bottom: 20px
+        transition 0.5s
+        // icono del card
+        .category-icon
+          width: 32px
+          height: 32px
+          margin-bottom: 15px
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        // Titulo del card
+        .category-title
+          text-align: center
+          font-family: fontfam
+          font-size: font-s
+          
+          text-decoration: none
+      .category-card:hover 
+        transform rotate(10deg)
 
 // //Slider 
 // //Contenedor slider
