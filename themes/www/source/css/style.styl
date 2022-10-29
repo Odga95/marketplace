@@ -344,13 +344,15 @@ body
           transform scale(1.1)
 
 // Category
-.category
+.category,
+.templates
   width: 100%
   height: 100%
   background: color-white
 
   //Contenedor - category
-  .category-container
+  .category-container,
+  .templates-container 
     width: 100%
     height: 100%
     display: flex
@@ -360,7 +362,8 @@ body
     padding: 50px 0px
 
     //Titulo y botón de view All
-    .category-heading
+    .category-heading,
+    .templates-heading
       display: flex
       justify-content: space-between
       align-items: center
@@ -368,7 +371,8 @@ body
       width: 100%
 
       //Titulo de la sección
-      .category-text
+      .category-text,
+      .template-text
         color color-first
         font-size: font-m
         font-weight: 700
@@ -377,7 +381,8 @@ body
           justify-content: center
           align-items: center
       //Botón a sección de las categorías
-      .category-button
+      .category-button,
+      .template-button
         width: 100px
         height: 100%
         position relative
@@ -419,7 +424,8 @@ body
       height: 1px;
 
     // Sección de las categorías
-    .category-categories
+    .category-categories,
+    .template-templates 
       width 100%
       display: flex
       flex-wrap: wrap
@@ -428,7 +434,7 @@ body
       padding: 40px 0px 50px 0px
       
       // Diseño de las cards para las categorías
-      .category-card
+      .category-card,.template-card 
         width: 120px
         padding: 30px 20px
         -webkit-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
@@ -460,6 +466,19 @@ body
           text-decoration: none
       .category-card:hover 
         transform rotate(10deg)
+
+// Cards Templates
+
+.templates 
+  .templates-container 
+    .template-templates 
+      .template-card 
+        width: 270px
+        height: 380px
+       
+
+
+
 
 // //Slider 
 // //Contenedor slider
