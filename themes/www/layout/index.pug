@@ -123,41 +123,138 @@ block body-main
         hr
         //- Sección de las plantillas-cards
         .template-templates 
+        
           .template-card 
             //-slider de imágenes 
             .template-slider
+              img(src="/img/plantilla5.webp", alt="", srcset="")
             //-Titulo de la plantilla - precio y botón de acceso
             .template-info
               .template-title 
-              .price 
-              a(href="/") .button
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
+        
+          .template-card 
+            //-slider de imágenes 
+            .template-slider
+              img(src="/img/plantilla4.jpg", alt="", srcset="")
+            //-Titulo de la plantilla - precio y botón de acceso
+            .template-info
+              .template-title 
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
+        
+          .template-card 
+            //-slider de imágenes 
+            .template-slider
+              img(src="/img/plantilla3.webp", alt="", srcset="")
+            //-Titulo de la plantilla - precio y botón de acceso
+            .template-info
+              .template-title 
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
+        
+          .template-card 
+            //-slider de imágenes 
+            .template-slider
+              img(src="/img/plantilla2.jpg", alt="", srcset="")
+            //-Titulo de la plantilla - precio y botón de acceso
+            .template-info
+              .template-title 
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
 
           .template-card 
             //-slider de imágenes 
             .template-slider
+              img(src="/img/plantilla1.jpg", alt="", srcset="")
             //-Titulo de la plantilla - precio y botón de acceso
             .template-info
               .template-title 
-              .price 
-              a(href="/") .button
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
 
           .template-card 
             //-slider de imágenes 
             .template-slider
+              img(src="/img/plantilla6.webp", alt="", srcset="")
             //-Titulo de la plantilla - precio y botón de acceso
             .template-info
               .template-title 
-              .price 
-              a(href="/") .button
-
-          .template-card 
-            //-slider de imágenes 
-            .template-slider
-            //-Titulo de la plantilla - precio y botón de acceso
-            .template-info
-              .template-title 
-              .price 
-              a(href="/") .button
+                h3 Title template
+                .stars
+                  - var stars = 5;
+                  - var n = 0;
+                  ul
+                    while n < stars
+                      li
+                        .fa-solid.fa-star.fa-xs
+                      - n++
+                    span  (30)
+                a(href="/").button Ver plantilla
+              .price-button
+                .price (35,00 €)
+                a(href="/").button Buy
 
 
 
@@ -165,25 +262,58 @@ block body-main
     .container
       .group-sliders
         .first-slider
+          a.content-slid(href="http://")
+            .box-slid
+              .title
+                h3 Title sections
+              .text 
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quae aliquid sint consectetur, beatae id! Aspernatur necessitatibus repellat nobis quod? Modi accusantium harum totam nisi aut incidunt necessitatibus odit optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, explicabo id tempore saepe quos consectetur voluptatibus repellendus recusandae dolor accusamus sed qui facere maxime repellat officiis consequatur commodi? Vel, aut.
           .image 
             img(src="/img/plantilla5.webp" alt="")
-          a(href="/").button 
         .second-slider
+          a.content-slid(href="http://")
+            .box-slid
+              .title
+                h3 Title sections
+              .text 
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quae aliquid sint consectetur, beatae id! Aspernatur necessitatibus repellat nobis quod? Modi accusantium harum totam nisi aut incidunt necessitatibus odit optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, explicabo id tempore saepe quos consectetur voluptatibus repellendus recusandae dolor accusamus sed qui facere maxime repellat officiis consequatur commodi? Vel, aut.
           .image 
             img(src="/img/plantilla2.jpg" alt="")
           a(href="/").button 
         .third-slider
+          a.content-slid(href="http://")
+            .box-slid
+              .title
+                h3 Title sections
+              .text 
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quae aliquid sint consectetur, beatae id! Aspernatur necessitatibus repellat nobis quod? Modi accusantium harum totam nisi aut incidunt necessitatibus odit optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, explicabo id tempore saepe quos consectetur voluptatibus repellendus recusandae dolor accusamus sed qui facere maxime repellat officiis consequatur commodi? Vel, aut.
+          
           .image 
             img(src="/img/plantilla3.webp" alt="")
           a(href="/").button 
         .fourth-slider
+          a.content-slid(href="http://")
+            .box-slid
+              .title
+                h3 Title sections
+              .text 
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quae aliquid sint consectetur, beatae id! Aspernatur necessitatibus repellat nobis quod? Modi accusantium harum totam nisi aut incidunt necessitatibus odit optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, explicabo id tempore saepe quos consectetur voluptatibus repellendus recusandae dolor accusamus sed qui facere maxime repellat officiis consequatur commodi? Vel, aut.
+          
           .image 
             img(src="/img/plantilla4.jpg" alt="")
           a(href="/").button 
         .fifth-slider
+          a.content-slid(href="http://")
+            .box-slid
+              .title
+                h3 Title sections
+              .text 
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quae aliquid sint consectetur, beatae id! Aspernatur necessitatibus repellat nobis quod? Modi accusantium harum totam nisi aut incidunt necessitatibus odit optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, explicabo id tempore saepe quos consectetur voluptatibus repellendus recusandae dolor accusamus sed qui facere maxime repellat officiis consequatur commodi? Vel, aut.
+          
           .image 
             img(src="/img/plantilla1.jpg" alt="")
           a(href="/").button 
+
 
 
   //- .slide
@@ -231,6 +361,7 @@ block body-main
   //-         p Sin pagos adicionales
   //-       .banner__button
   //-         p Explorar plantillas
+
 
 block body-footer
   include includes/footer

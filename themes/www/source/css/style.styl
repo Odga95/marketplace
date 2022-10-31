@@ -131,13 +131,17 @@ body
   margin auto
 
 // Input buscador que va despues del header
+
+
 .main-header
+  background: linear-gradient(-45deg, #ee7755, #e73c7e, #23a6d5, #23d5ab);
   height  50vh
-  background  #110f1f
+  background-size: 400% 400%;
   display  flex
   justify-content  center
   align-items  center
   opacity 0.94
+  animation: gradient 15s ease infinite;
   .input[type=text], select 
     width  50%
     padding  20px 20px
@@ -148,12 +152,13 @@ body
     box-sizing  border-box
     font-family  fontfam
     font-size  font-s
-#canvas
-  z-index  -1
-  display  flex
-  position  absolute
-  width  100%
-  height  100%
+@keyframes gradient 
+	0% 
+		background-position: 0% 50%;
+	50% 
+		background-position: 100% 50%;
+	100% 
+		background-position: 0% 50%;
 
 // Estilo para el banner con fondo 
 .banner
@@ -312,6 +317,7 @@ body
     .first-slider
       width: 60%
       padding 20px
+
     .second-slider
       width: 40%
       padding: 20px
@@ -326,6 +332,7 @@ body
     .third-slider,
     .fourth-slider,
     .fifth-slider
+      position: relative
       .image
         width: 100%
         height: 100%
@@ -337,11 +344,58 @@ body
           border-radius 25px
           width 100%
           height 100%
-          transition 0.2s
+          transition 0.25s
           object-fit cover
-        img:hover
+      .content-slid
+        position: absolute
+        top 0
+        left: 0
+        width: 100%
+        height: 100%
+        color color-white
+        padding 20px
+        text-decoration: none
+        opacity 0
+        z-index 2
+        transition 0.25s
+        .box-slid
+          background: rgba(0, 0, 0, 0.8)
           width: 100%
+          height: 100%
+          border-radius 25px
+          display: flex
+          flex-direction: column
+          justify-content: center
+          padding: 30px
+          gap: 10px
+          .title
+            font-size: font-m
+            transition 0.25s
+          .text
+            font-size: font-s
+            display -webkit-box
+            -webkit-line-clamp 5
+            line-height  1.34
+            -webkit-box-orient vertical
+            overflow hidden
+            text-overflow ellipsis
+          .title:hover
+            text-decoration: underline
+            color rgb(174, 155, 255)
+    .first-slider:hover,
+    .second-slider:hover
+    .third-slider:hover,
+    .fourth-slider:hover,
+    .fifth-slider:hover
+      .image
+        img
           transform scale(1.1)
+      .content-slid
+        transform scale(1.1)
+        opacity 1
+            
+
+
 
 // Category
 .category,
@@ -411,7 +465,8 @@ body
           width: 70px
           text-align: center
 
-      .category-button:hover .button
+      .category-button:hover .button,
+      .template-button:hover .button
         filter: blur(4px)
 
       // Linea de división o separación del heading
@@ -446,7 +501,7 @@ body
         align-items: center
         border-radius 10px
         text-decoration: none
-        margin-bottom: 20px
+        margin-bottom: 50px
         transition 0.5s
         // icono del card
         .category-icon
@@ -466,18 +521,112 @@ body
           text-decoration: none
       .category-card:hover 
         transform rotate(10deg)
+      .template-card:hover 
+        .template-info
+          .price-button,.template-title
+            h3,.stars,.price
+              opacity 0
+            .button
+              opacity: 1
 
 // Cards Templates
 
+//- Sección de algunas plantillas en la index
 .templates 
   .templates-container 
+
+    //-slider de imágenes 
     .template-templates 
+      //- Sección de las plantillas-cards
       .template-card 
         width: 270px
         height: 380px
-       
+        padding: 0
+        position relative
+        justify-content: flex-start
+        //-slider de imágenes 
+        .template-slider
+          width: 100%
+          height: 310px
+          margin-top: 0
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius 10px
+        //-Titulo de la plantilla - precio y botón de acceso
+        .template-info
+          background: rgb(255, 255, 255)
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+          z-index 0
+          position: absolute
+          width: 100%
+          height: 80px
+          bottom 0
+          left 0
+          display: flex
+          justify-content: space-between
+          align-items: center
+          border-end-end-radius: 10px
+          border-end-start-radius: 10px
+          padding: 0px 20px
 
+          @keyframes gradient 
+            0% 
+              background-position: 0% 50%;
+            50% 
+              background-position: 100% 50%;
+            100% 
+              background-position: 0% 50%;
+          .stars
+            padding-top: 5px
+            ul
+              display: flex
+              li
+                list-style: none
+                .fa-solid
+                  color rgb(252, 193, 0)
+          .template-title,
+          .price-button
+            position relative
+            font-size font-s
+            font-weight 700
+            color color-first
+            transition 0.25s
+            .price
+              display  flex
+              padding 20px 0px
+              opacity 1
+              transition 0.25s
+            .button
+              padding 20px 0px
+              position absolute
+              top 0
+              left 0
+              transform translate(-10%, 25%)
+              opacity:0
+              transition 0.25s
+              background-color: color-first
+              color: white;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius 4px
+          .template-title
+            .button
+              background: linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%);
+              transform translate(0%, -12.5%)
+          .price-button:hover .button
+          .template-title:hover .button
+            background-color: #4CAF50
+              
 
+          
+            
 
 
 // //Slider 
