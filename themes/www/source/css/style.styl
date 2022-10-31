@@ -143,7 +143,7 @@ body
   opacity 0.94
   animation: gradient 15s ease infinite;
   .input[type=text], select 
-    width  50%
+    width 85%
     padding  20px 20px
     margin  8px 0
     display  inline-block
@@ -152,6 +152,10 @@ body
     box-sizing  border-box
     font-family  fontfam
     font-size  font-s
+    @media movil
+      width  70%
+    @media tablet
+      width  50%
 @keyframes gradient 
 	0% 
 		background-position: 0% 50%;
@@ -214,9 +218,11 @@ body
     padding 0px
     .card-section-heading-title,.card-section-heading-text
       color color-first
-      font-size  font-xl
+      font-size  font-l
       text-align  center
       margin-bottom  20px
+      @media movil
+        font-size  font-xl
     .card-section-heading-text
       color color-letter
       font-size  font-m
@@ -407,13 +413,16 @@ body
   //Contenedor - category
   .category-container,
   .templates-container 
-    width: 100%
+    width: 95%
     height: 100%
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     padding: 50px 0px
+    margin auto
+    @media escritorio-s
+      width: 100%
 
     //Titulo y botón de view All
     .category-heading,
@@ -421,19 +430,28 @@ body
       display: flex
       justify-content: space-between
       align-items: center
+      flex-direction: column
       padding: 10px 0px 
       width: 100%
-
+      gap: 20px
+      @media movil
+        gap: none
+        flex-direction: row
       //Titulo de la sección
       .category-text,
       .template-text
         color color-first
-        font-size: font-m
+        font-size: font-s
         font-weight: 700
+        text-align: center
+        @media movil
+          font-size: font-m
+          text-align: left
         h2
           display: flex
           justify-content: center
           align-items: center
+        
       //Botón a sección de las categorías
       .category-button,
       .template-button
@@ -441,6 +459,7 @@ body
         height: 100%
         position relative
         .button
+          width: 100px
           text-decoration: none
           color color-white
           font-weight: 700
@@ -452,6 +471,7 @@ body
           border-radius: 4px
           transition: 0.5s
           font-size: font-s
+          margin 0
         .text
           text-decoration: none
           width: fit-content
@@ -461,8 +481,9 @@ body
           font-weight: 700
           top: 50%;
           left: 50%;
+          padding: 8px 12px
           transform: translate(-50%, -50%);
-          width: 70px
+          width: 120px
           text-align: center
 
       .category-button:hover .button,
@@ -485,12 +506,23 @@ body
       display: flex
       flex-wrap: wrap
       align-items: center
-      justify-content: space-between
+      justify-content: center
       padding: 40px 0px 50px 0px
+      gap 20px
+      width: 270px
+      @media movil
+        padding: 40px 20px 50px 20px
+        width 500px
+      @media tablet
+        width 600px
+      @media escritorio-s
+        padding: 40px 0px 50px 0px
+        gap 20px
+        width 100%
       
       // Diseño de las cards para las categorías
       .category-card,.template-card 
-        width: 120px
+        width: 110px
         padding: 30px 20px
         -webkit-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
         -moz-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
@@ -501,8 +533,17 @@ body
         align-items: center
         border-radius 10px
         text-decoration: none
-        margin-bottom: 50px
         transition 0.5s
+        gap 10px 
+        @media movil
+          width: 120px
+          gap 10px 
+        @media tablet
+          width: 150px
+        @media escritorio-s
+           width: 120px
+
+
         // icono del card
         .category-icon
           width: 32px
@@ -537,9 +578,12 @@ body
 
     //-slider de imágenes 
     .template-templates 
+      gap 40px
+      @media movil
+        gap 20px
       //- Sección de las plantillas-cards
       .template-card 
-        width: 270px
+        width: 250px
         height: 380px
         padding: 0
         position relative
@@ -549,6 +593,8 @@ body
           width: 100%
           height: 310px
           margin-top: 0
+          @media movil
+            width: 100%
           img
             width: 100%
             height: 100%
@@ -594,18 +640,24 @@ body
             font-weight 700
             color color-first
             transition 0.25s
+            .stars,h3
+              opacity 0
+              @media tablet
+                opacity 1
             .price
               display  flex
               padding 20px 0px
-              opacity 1
+              opacity 0
               transition 0.25s
+              @media tablet
+                opacity 1
             .button
               padding 20px 0px
               position absolute
               top 0
               left 0
               transform translate(-10%, 25%)
-              opacity:0
+              opacity:1
               transition 0.25s
               background-color: color-first
               color: white;
@@ -616,6 +668,8 @@ body
               font-size: 16px;
               cursor: pointer;
               border-radius 4px
+              @media tablet
+                opacity: 0
           .template-title
             .button
               background: linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%);
