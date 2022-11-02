@@ -1,0 +1,37 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  //- market content size
+  .market
+    .market-content
+      .marketplace
+        .sidebar-marketplace
+          .filter
+            .filter-title 
+              h2 filtrar por: 
+            ul.filter-category
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+              li.filter-category-item 
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
+        .main-content-marketplace
+          .main-heading
+            .main-title 
+            .main-pagination 
+          .main-product
+
+block body-footer
+  include includes/footer
