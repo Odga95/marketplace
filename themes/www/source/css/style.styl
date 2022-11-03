@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;900&display=swap');
-@font-face {
-  font-family  CalSans-SemiBold
-  src  url(../fonts/otf/CalSans-SemiBold.otf)
-}
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;400;500;900&display=swap');
+
 
 fontfam = 'Familjen Grotesk', sans-serif;
 fontfam1 = 'Fira Sans', sans-serif;
@@ -575,7 +572,6 @@ body
 //- Sección de algunas plantillas en la index
 .templates 
   .templates-container 
-
     //-slider de imágenes 
     .template-templates 
       gap 40px
@@ -629,6 +625,7 @@ body
             padding-top: 5px
             ul
               display: flex
+              margin-left: 5px
               li
                 list-style: none
                 .fa-solid
@@ -692,16 +689,195 @@ body
     .marketplace
       width 100%
       display: flex
-      flex-direction: column
-      padding 50px
-      // .sidebar-marketplace
-      //   .category
-      //     ul
-      //   .templates-state
-      //   .price
+      flex-direction: row
+      padding 50px 20px
+      .sidebar-marketplace
+        width: 25%
+        padding: 40px 20px
+      .main-content-marketplace
+        width: 75%
+        padding: 40px 20px
+        .main-heading
+          width: 100%
+          display: flex
+          flex-direction: column
+          gap: 15px
+          .main-title 
+            color color-first
+          .main-pagination 
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .main-pagination-page
+              display: flex
+              width: fit-content
+              padding: 10px 20px
+              .main-pagination-page-list
+                width 100%
+                height 100%
+                gap 10px
+                display: flex
+                .main-pagination-page-list-item
+                  width 40px
+                  height: 40px
+                  list-style none
+                  display: flex
+                  justify-content: center
+                  align-items: center
+                  border-radius 4px
+                  // background: linear-gradient(90deg, rgba(0,5,255,0.75) 0%, rgba(188,0,255,0.75) 60%, rgba(255,0,185,0.75) 100%);
+                  background: color-white
+                  -webkit-box-shadow: 0px 0px 5px 4px rgba(191,191,191,0.3);
+                  -moz-box-shadow: 0px 5px 1px 4px rgba(191,191,191,0.3);
+                  box-shadow: 0px 0px 5px 4px rgba(191,191,191,0.3);
+                  .main-pagination-page-list-item-content
+                    display: flex
+                    width: 100%
+                    height: 100%
+                    justify-content: center
+                    align-items: center
+                    color color-letter
+                    text-decoration: none
+                    font-weight: 500
+                    font-size: 12px
+          .main-pagination-orderby
+            width: fit-content
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            gap 10px
+            select
+              position: relative
+              border none
+              color rgb(79, 79, 255)
+              font-family: fontfam1
+              background: color-white
+              option 
+                color: color-first
+                border: none
 
-      // .main-content-marketplace
-    
+        .main-product
+          width: 100%
+          height: auto
+          padding: 40px 0px
+          position relative
+          justify-content: flex-start
+          //-slider de imágenes 
+          .main-product__grid
+            position: relative
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            @media (min-width: 600px) 
+              grid-template-columns: repeat(2, 1fr);
+            @media (min-width: 1000px) 
+              grid-template-columns: repeat(3, 1fr);
+            .template-card 
+              position: relative
+              -webkit-box-shadow: 0px 0px 17px 4px rgba(191,191,191,0.3);
+              -moz-box-shadow: 0px 17px 1px 4px rgba(191,191,191,0.3);
+              box-shadow: 0px 0px 17px 4px rgba(191,191,191,0.3);
+              border-radius 20px
+              .template-slider
+                width: 100%
+                height: 310px
+                margin-top: 0
+                @media movil
+                  width: 100%
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+                  border-radius 10px
+              //-Titulo de la plantilla - precio y botón de acceso
+              .template-info
+                background: rgb(255, 255, 255)
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+                z-index 0
+                position: absolute
+                width: 100%
+                height: 80px
+                bottom 0
+                left 0
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border-end-end-radius: 10px
+                border-end-start-radius: 10px
+                padding: 0px 20px
+
+                @keyframes gradient 
+                  0% 
+                    background-position: 0% 50%;
+                  50% 
+                    background-position: 100% 50%;
+                  100% 
+                    background-position: 0% 50%;
+                .stars
+                  padding-top: 5px
+                  ul
+                    display: flex
+                    margin-left: 5px
+                    li
+                      list-style: none
+                      .fa-solid
+                        color rgb(252, 193, 0)
+                .template-title,
+                .price-button
+                  position relative
+                  font-size font-s
+                  font-weight 700
+                  color color-first
+                  transition 0.25s
+                  .stars,h3
+                    opacity 0
+                    @media tablet
+                      opacity 1
+                  .price
+                    display  flex
+                    padding 20px 0px
+                    opacity 0
+                    transition 0.25s
+                    @media tablet
+                      opacity 1
+                  .button
+                    padding 20px 0px
+                    position absolute
+                    top 0
+                    left 0
+                    transform translate(-10%, 25%)
+                    opacity:1
+                    transition 0.25s
+                    background-color: color-first
+                    color: white;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius 4px
+                    @media tablet
+                      opacity: 0
+                .template-title
+                  .button
+                    background: linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%);
+                    transform translate(0%, -12.5%)
+                .price-button:hover .button
+                .template-title:hover .button
+                  background-color: #4CAF50
+
+
+
+            
+
+
+          
+
 
 
 

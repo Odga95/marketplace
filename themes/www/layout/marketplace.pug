@@ -19,7 +19,7 @@ block body-main
                 <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
               li.filter-category-item 
                 <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
-              li.filter-category-item 
+              li.filter-category-item
                 <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
               li.filter-category-item 
                 <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
@@ -30,8 +30,158 @@ block body-main
         .main-content-marketplace
           .main-heading
             .main-title 
+              h2 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             .main-pagination 
+              .main-pagination-page
+                ul.main-pagination-page-list
+                  li.main-pagination-page-list-item
+                    a.main-pagination-page-list-item-content(href="/") 1
+                  li.main-pagination-page-list-item
+                    a.main-pagination-page-list-item-content(href="/") 2
+                  li.main-pagination-page-list-item
+                    a.main-pagination-page-list-item-content(href="/") 3
+              .main-pagination-orderby
+                label.font-s(for="orderby") Ordenar por:
+                select(name="orderby" id="orderby")
+                  option(value="volvo") Relevantes
+                  option(value="saab") Menor precio
+                  option(value="opel") Mayor precio
           .main-product
+            .main-product__grid
+              .template-card 
+                //-slider de imágenes 
+                .template-slider
+                  img(src="/img/plantilla5.webp", alt="", srcset="")
+                //-Titulo de la plantilla - precio y botón de acceso
+                .template-info
+                  .template-title 
+                    h3 Title template
+                    .stars
+                      - var stars = 5;
+                      - var n = 0;
+                      ul
+                        while n < stars
+                          li
+                            .fa-solid.fa-star.fa-xs
+                          - n++
+                        span  ㅤ(30)
+                    a(href="/").button Ver plantilla
+                  .price-button
+                    .price (35,00 €)
+                    a(href="/").button Buy
+            
+              //- .template-card 
+              //-   //-slider de imágenes 
+              //-   .template-slider
+              //-     img(src="/img/plantilla4.jpg", alt="", srcset="")
+              //-   //-Titulo de la plantilla - precio y botón de acceso
+              //-   .template-info
+              //-     .template-title 
+              //-       h3 Title template
+              //-       .stars
+              //-         - var stars = 5;
+              //-         - var n = 0;
+              //-         ul
+              //-           while n < stars
+              //-             li
+              //-               .fa-solid.fa-star.fa-xs
+              //-             - n++
+              //-           span  ㅤ(30)
+              //-       a(href="/").button Ver plantilla
+              //-     .price-button
+              //-       .price (35,00 €)
+              //-       a(href="/").button Buy
+            
+              //- .template-card 
+              //-   //-slider de imágenes 
+              //-   .template-slider
+              //-     img(src="/img/plantilla3.webp", alt="", srcset="")
+              //-   //-Titulo de la plantilla - precio y botón de acceso
+              //-   .template-info
+              //-     .template-title 
+              //-       h3 Title template
+              //-       .stars
+              //-         - var stars = 5;
+              //-         - var n = 0;
+              //-         ul
+              //-           while n < stars
+              //-             li
+              //-               .fa-solid.fa-star.fa-xs
+              //-             - n++
+              //-           span  ㅤ(30)
+              //-       a(href="/").button Ver plantilla
+              //-     .price-button
+              //-       .price (35,00 €)
+              //-       a(href="/").button Buy
+            
+              //- .template-card 
+              //-   //-slider de imágenes 
+              //-   .template-slider
+              //-     img(src="/img/plantilla2.jpg", alt="", srcset="")
+              //-   //-Titulo de la plantilla - precio y botón de acceso
+              //-   .template-info
+              //-     .template-title 
+              //-       h3 Title template
+              //-       .stars
+              //-         - var stars = 5;
+              //-         - var n = 0;
+              //-         ul
+              //-           while n < stars
+              //-             li
+              //-               .fa-solid.fa-star.fa-xs
+              //-             - n++
+              //-           span  ㅤ(30)
+              //-       a(href="/").button Ver plantilla
+              //-     .price-button
+              //-       .price (35,00 €)
+              //-       a(href="/").button Buy
+
+              //- .template-card 
+              //-   //-slider de imágenes 
+              //-   .template-slider
+              //-     img(src="/img/plantilla1.jpg", alt="", srcset="")
+              //-   //-Titulo de la plantilla - precio y botón de acceso
+              //-   .template-info
+              //-     .template-title 
+              //-       h3 Title template
+              //-       .stars
+              //-         - var stars = 5;
+              //-         - var n = 0;
+              //-         ul
+              //-           while n < stars
+              //-             li
+              //-               .fa-solid.fa-star.fa-xs
+              //-             - n++
+              //-           span  ㅤ(30)
+              //-       a(href="/").button Ver plantilla
+              //-     .price-button
+              //-       .price (35,00 €)
+              //-       a(href="/").button Buy
+
+              //- .template-card 
+              //-   //-slider de imágenes 
+              //-   .template-slider
+              //-     img(src="/img/plantilla6.webp", alt="", srcset="")
+              //-   //-Titulo de la plantilla - precio y botón de acceso
+              //-   .template-info
+              //-     .template-title 
+              //-       h3 Title template
+              //-       .stars
+              //-         - var stars = 5;
+              //-         - var n = 0;
+              //-         ul
+              //-           while n < stars
+              //-             li
+              //-               .fa-solid.fa-star.fa-xs
+              //-             - n++
+              //-           span  ㅤ(30)
+              //-       a(href="/").button Ver plantilla
+              //-     .price-button
+              //-       .price (35,00 €)
+              //-       a(href="/").button Buy
+
+
+
 
 block body-footer
   include includes/footer
