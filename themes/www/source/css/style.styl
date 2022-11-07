@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Fira+Sans:wght@200;400;500;900&display=swap');
 
 
-fontfam = 'Familjen Grotesk', sans-serif;
-fontfam1 = 'Fira Sans', sans-serif;
 
+fontfam = 'Familjen Grotesk', sans-serif 
+fontfam1 = 'Fira Sans', sans-serif 
 
+font-xxs = 0.5em
 font-xs = 0.6em
 font-s = 0.7em
 font-m = 1.1em
@@ -19,7 +20,7 @@ color-first = #110f1f
 color-second = rgba(155, 160, 255, 0.966)
 color-third = rgba(61, 67, 177, 0.966)
 
-
+movil-xs = 'screen and (min-width  374px)'
 movil = 'screen and (min-width  576px)'
 tablet = 'screen and (min-width  768px)'
 escritorio-s = 'screen and (min-width  992px)'
@@ -130,15 +131,22 @@ body
 // Input buscador que va despues del header
 
 
-.main-header
-  background: linear-gradient(-45deg, #ee7755, #e73c7e, #23a6d5, #23d5ab);
+.main-header,.main-header-template
+  background  linear-gradient(-45deg, #ee7755, #e73c7e, #23a6d5, #23d5ab) 
   height  50vh
-  background-size: 400% 400%;
+  background-size  400% 400% 
   display  flex
   justify-content  center
   align-items  center
   opacity 0.94
-  animation: gradient 15s ease infinite;
+  animation  gradient 15s ease infinite 
+  @keyframes gradient 
+    0% 
+      background-position  0% 50% 
+    50% 
+      background-position  100% 50% 
+    100% 
+      background-position  0% 50% 
   .input[type=text], select 
     width 85%
     padding  20px 20px
@@ -153,14 +161,10 @@ body
       width  70%
     @media tablet
       width  50%
-@keyframes gradient 
-	0% 
-		background-position: 0% 50%;
-	50% 
-		background-position: 100% 50%;
-	100% 
-		background-position: 0% 50%;
-
+.main-header-template
+  background rgba(5, 6, 26, 0.966)  
+  height 15vh
+  opacity 0.97
 // Estilo para el banner con fondo 
 .banner
   width  100%
@@ -303,79 +307,79 @@ body
 //Diseño para todas las secciones
 
 .section-group-sliders
-  width: 100%
-  height: 100%
-  background: color-white
-  padding: 50px 20px
+  width  100%
+  height  100%
+  background  color-white
+  padding  50px 20px
   .group-sliders
-    width: 100%
-    background: color-white
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    align-items: flex-start
+    width  100%
+    background  color-white
+    display  flex
+    flex-wrap  wrap
+    justify-content  center
+    align-items  flex-start
     .first-slider,
     .second-slider
-      height: 300px
+      height  300px
     .first-slider
-      width: 60%
+      width  60%
       padding 20px
 
     .second-slider
-      width: 40%
-      padding: 20px
+      width  40%
+      padding  20px
     .third-slider,
     .fourth-slider,
     .fifth-slider
-      padding: 20px
-      width: 33%
-      height: 250px
+      padding  20px
+      width  33%
+      height  250px
     .first-slider,
     .second-slider,
     .third-slider,
     .fourth-slider,
     .fifth-slider
-      position: relative
+      position  relative
       .image
-        width: 100%
-        height: 100%
-        background: white
+        width  100%
+        height  100%
+        background  white
         img
-          -webkit-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
-          -moz-box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
-          box-shadow: 2px 4px 30px -7px rgba(0,0,0,0.75);
+          -webkit-box-shadow  2px 4px 30px -7px rgba(0,0,0,0.75) 
+          -moz-box-shadow  2px 4px 30px -7px rgba(0,0,0,0.75) 
+          box-shadow  2px 4px 30px -7px rgba(0,0,0,0.75) 
           border-radius 25px
           width 100%
           height 100%
           transition 0.25s
           object-fit cover
       .content-slid
-        position: absolute
+        position  absolute
         top 0
-        left: 0
-        width: 100%
-        height: 100%
+        left  0
+        width  100%
+        height  100%
         color color-white
         padding 20px
-        text-decoration: none
+        text-decoration  none
         opacity 0
         z-index 2
         transition 0.25s
         .box-slid
-          background: rgba(0, 0, 0, 0.8)
-          width: 100%
-          height: 100%
+          background  rgba(0, 0, 0, 0.8)
+          width  100%
+          height  100%
           border-radius 25px
-          display: flex
-          flex-direction: column
-          justify-content: center
-          padding: 30px
-          gap: 10px
+          display  flex
+          flex-direction  column
+          justify-content  center
+          padding  30px
+          gap  10px
           .title
-            font-size: font-m
+            font-size  font-m
             transition 0.25s
           .text
-            font-size: font-s
+            font-size  font-s
             display -webkit-box
             -webkit-line-clamp 5
             line-height  1.34
@@ -383,7 +387,7 @@ body
             overflow hidden
             text-overflow ellipsis
           .title:hover
-            text-decoration: underline
+            text-decoration  underline
             color rgb(174, 155, 255)
     .first-slider:hover,
     .second-slider:hover
@@ -403,160 +407,160 @@ body
 // Category
 .category,
 .templates
-  width: 100%
-  height: 100%
-  background: color-white
+  width  100%
+  height  100%
+  background  color-white
 
   //Contenedor - category
   .category-container,
   .templates-container 
-    width: 95%
-    height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    padding: 50px 0px
+    width  95%
+    height  100%
+    display  flex
+    flex-direction  column
+    justify-content  center
+    align-items  center
+    padding  50px 0px
     margin auto
     @media escritorio-s
-      width: 100%
+      width  100%
 
     //Titulo y botón de view All
     .category-heading,
     .templates-heading
-      display: flex
-      justify-content: space-between
-      align-items: center
-      flex-direction: column
-      padding: 10px 0px 
-      width: 100%
-      gap: 20px
+      display  flex
+      justify-content  space-between
+      align-items  center
+      flex-direction  column
+      padding  10px 0px 
+      width  100%
+      gap  20px
       @media movil
-        gap: none
-        flex-direction: row
+        gap  none
+        flex-direction  row
       //Titulo de la sección
       .category-text,
       .template-text
         color color-first
-        font-size: font-s
-        font-weight: 700
-        text-align: center
+        font-size  font-s
+        font-weight  700
+        text-align  center
         @media movil
-          font-size: font-m
-          text-align: left
+          font-size  font-m
+          text-align  left
         h2
-          display: flex
-          justify-content: center
-          align-items: center
+          display  flex
+          justify-content  center
+          align-items  center
         
       //Botón a sección de las categorías
       .category-button,
       .template-button
-        width: 100px
-        height: 100%
+        width  100px
+        height  100%
         position relative
         .button
-          width: 100px
-          text-decoration: none
+          width  100px
+          text-decoration  none
           color color-white
-          font-weight: 700
-          display: flex
-          justify-content: center
-          align-items: center
-          padding: 8px 12px
-          background: linear-gradient(90deg, rgba(255,0,185,0.5) 0%, rgba(188,0,255,0.5) 37%, rgba(0,5,255,0.5) 99%);       
-          border-radius: 4px
-          transition: 0.5s
-          font-size: font-s
+          font-weight  700
+          display  flex
+          justify-content  center
+          align-items  center
+          padding  8px 12px
+          background  linear-gradient(90deg, rgba(255,0,185,0.5) 0%, rgba(188,0,255,0.5) 37%, rgba(0,5,255,0.5) 99%)        
+          border-radius  4px
+          transition  0.5s
+          font-size  font-s
           margin 0
         .text
-          text-decoration: none
-          width: fit-content
-          position: absolute
-          font-size: font-s
+          text-decoration  none
+          width  fit-content
+          position  absolute
+          font-size  font-s
           color color-white
-          font-weight: 700
-          top: 50%;
-          left: 50%;
-          padding: 8px 12px
-          transform: translate(-50%, -50%);
-          width: 120px
-          text-align: center
+          font-weight  700
+          top  50% 
+          left  50% 
+          padding  8px 12px
+          transform  translate(-50%, -50%) 
+          width  120px
+          text-align  center
 
       .category-button:hover .button,
       .template-button:hover .button
-        filter: blur(4px)
+        filter  blur(4px)
 
       // Linea de división o separación del heading
     hr 
-      width: 100%
+      width  100%
       margin auto
-      height: 8px;
-      background: rgba(128, 128, 128, 0.356)
-      border: 0;
-      height: 1px;
+      height  8px 
+      background  rgba(128, 128, 128, 0.356)
+      border  0 
+      height  1px 
 
     // Sección de las categorías
     .category-categories,
     .template-templates 
       width 100%
-      display: flex
-      flex-wrap: wrap
-      align-items: center
-      justify-content: center
-      padding: 40px 0px 50px 0px
+      display  flex
+      flex-wrap  wrap
+      align-items  center
+      justify-content  center
+      padding  40px 0px 50px 0px
       gap 20px
-      width: 270px
+      width  270px
       @media movil
-        padding: 40px 20px 50px 20px
+        padding  40px 20px 50px 20px
         width 500px
       @media tablet
         width 600px
       @media escritorio-s
-        padding: 40px 0px 50px 0px
+        padding  40px 0px 50px 0px
         gap 20px
         width 100%
       
       // Diseño de las cards para las categorías
       .category-card,.template-card 
-        width: 110px
-        padding: 30px 20px
-        -webkit-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
-        -moz-box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
-        box-shadow: 0px 0px 27px 4px rgba(191,191,191,0.75);
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        width  110px
+        padding  30px 20px
+        -webkit-box-shadow  0px 0px 27px 4px rgba(191,191,191,0.75) 
+        -moz-box-shadow  0px 0px 27px 4px rgba(191,191,191,0.75) 
+        box-shadow  0px 0px 27px 4px rgba(191,191,191,0.75) 
+        display  flex
+        flex-direction  column
+        justify-content  center
+        align-items  center
         border-radius 10px
-        text-decoration: none
+        text-decoration  none
         transition 0.5s
         gap 10px 
         @media movil
-          width: 120px
+          width  120px
           gap 10px 
         @media tablet
-          width: 150px
+          width  150px
         @media escritorio-s
-           width: 120px
+           width  120px
 
 
         // icono del card
         .category-icon
-          width: 32px
-          height: 32px
-          margin-bottom: 15px
+          width  32px
+          height  32px
+          margin-bottom  15px
           img
-            width: 100%
-            height: 100%
-            object-fit: cover
+            width  100%
+            height  100%
+            object-fit  cover
         // Titulo del card
         .category-title
-          text-align: center
-          font-family: fontfam
-          font-size: font-s
+          text-align  center
+          font-family  fontfam
+          font-size  font-s
           
-          text-decoration: none
+          text-decoration  none
       .category-card:hover 
         transform rotate(10deg)
       .template-card:hover 
@@ -565,7 +569,7 @@ body
             h3,.stars,.price
               opacity 0
             .button
-              opacity: 1
+              opacity  1
 
 // Cards Templates
 
@@ -579,55 +583,55 @@ body
         gap 20px
       //- Sección de las plantillas-cards
       .template-card 
-        width: 250px
-        height: 380px
-        padding: 0
+        width  250px
+        height  380px
+        padding  0
         position relative
-        justify-content: flex-start
+        justify-content  flex-start
         //-slider de imágenes 
         .template-slider
-          width: 100%
-          height: 310px
-          margin-top: 0
+          width  100%
+          height  310px
+          margin-top  0
           @media movil
-            width: 100%
+            width  100%
           img
-            width: 100%
-            height: 100%
-            object-fit: cover
+            width  100%
+            height  100%
+            object-fit  cover
             border-radius 10px
         //-Titulo de la plantilla - precio y botón de acceso
         .template-info
-          background: rgb(255, 255, 255)
-          background-size: 400% 400%;
-          animation: gradient 15s ease infinite;
+          background  rgb(255, 255, 255)
+          background-size  400% 400% 
+          animation  gradient 15s ease infinite 
           z-index 0
-          position: absolute
-          width: 100%
-          height: 80px
+          position  absolute
+          width  100%
+          height  80px
           bottom 0
           left 0
-          display: flex
-          justify-content: space-between
-          align-items: center
-          border-end-end-radius: 10px
-          border-end-start-radius: 10px
-          padding: 0px 20px
+          display  flex
+          justify-content  space-between
+          align-items  center
+          border-end-end-radius  10px
+          border-end-start-radius  10px
+          padding  0px 20px
 
           @keyframes gradient 
             0% 
-              background-position: 0% 50%;
+              background-position  0% 50% 
             50% 
-              background-position: 100% 50%;
+              background-position  100% 50% 
             100% 
-              background-position: 0% 50%;
+              background-position  0% 50% 
           .stars
-            padding-top: 5px
+            padding-top  5px
             ul
-              display: flex
-              margin-left: 5px
+              display  flex
+              margin-left  5px
               li
-                list-style: none
+                list-style  none
                 .fa-solid
                   color rgb(252, 193, 0)
           .template-title,
@@ -654,27 +658,26 @@ body
               top 0
               left 0
               transform translate(-10%, 25%)
-              opacity:1
+              opacity 1
               transition 0.25s
-              background-color: color-first
-              color: white;
-              padding: 10px 20px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              cursor: pointer;
+              background-color  color-first
+              color  white 
+              padding  10px 20px 
+              text-align  center 
+              text-decoration  none 
+              display  inline-block 
+              font-size  16px 
+              cursor  pointer 
               border-radius 4px
               @media tablet
-                opacity: 0
+                opacity  0
           .template-title
             .button
-              background: linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%);
+              background  linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%) 
               transform translate(0%, -12.5%)
           .price-button:hover .button
           .template-title:hover .button
-            background-color: #4CAF50
-              
+            background-color  #4CAF50
 
 //////////////////////////////////////////////////
 //////////////marketplace - page//////////////////
@@ -685,145 +688,348 @@ body
   .market-content
     max-width 1280px
     margin auto
-    padding 0px 20px
+    padding 0px
+    @media tablet
+      padding 0px 20px
     .marketplace
       width 100%
-      display: flex
-      flex-direction: row
-      padding 50px 20px
+      display  flex
+      flex-direction  column
+      padding 20px 0px
+      @media tablet
+        flex-direction  row
+        padding 50px 20px
+
+      // Sidebar left- filters
       .sidebar-marketplace
-        width: 25%
-        padding: 40px 20px
-      .main-content-marketplace
-        width: 75%
-        padding: 40px 20px
-        .main-heading
-          width: 100%
+        width  100%
+        padding  40px 20px
+        display: none
+        @media tablet
+          width  25%
           display: flex
-          flex-direction: column
-          gap: 15px
+          align-items: flex-start
+        // Sidebar filter content
+        .filter
+          display  flex
+          justify-content  center
+          align-items  flex-start
+          flex-direction  column
+          width  100%
+          gap 20px
+          // Sidebar filter title
+          .filter-title
+            font-size  font-xs
+            font-family  fontfam
+            color color-first
+          // Sidebar filter list categories
+          .filter-category
+            display  flex
+            flex-direction  column
+            width  100%
+            gap  8px
+            // Sidebar filter item list categories
+            .filter-category-item 
+              list-style  none
+
+              // Checkbox letters design
+              .container
+                height  25px
+                width  100%
+                font-size  font-xs
+                color color-letter
+                font-weight  500
+                position  relative 
+                padding-left  40px 
+                cursor  pointer 
+                -webkit-user-select  none 
+                -moz-user-select  none 
+                -ms-user-select  none 
+                user-select  none 
+                margin auto
+                display  flex
+                align-items  center
+
+              // Checkbox box design
+              input
+                position  absolute 
+                opacity  0 
+                cursor  pointer 
+                height  0 
+                width  0 
+
+              .checkmark
+                position  absolute 
+                top  0 
+                left  0 
+                transform  translate(25%, 0%) 
+                height  25px 
+                width  25px 
+                border 2px solid #eee
+                border-radius 4px
+                background-color  #fff 
+                /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after 
+                content  "" 
+                position  absolute 
+                display  none 
+                
+              .container:hover input ~ .checkmark 
+                background-color  #ccc 
+            
+
+              /* When the checkbox is checked, add a blue background */
+              .container input:checked ~ .checkmark 
+                background-color  #2196F3 
+              
+
+
+              /* Show the checkmark when checked */
+              .container input:checked ~ .checkmark:after 
+                display  block 
+              
+
+              /* Style the checkmark/indicator */
+              .container .checkmark:after 
+                left  7px 
+                top  2px 
+                width  5px 
+                height  10px 
+                border  solid white 
+                border-width  0 3px 3px 0 
+                -webkit-transform  rotate(45deg) 
+                -ms-transform  rotate(45deg) 
+                transform  rotate(45deg) 
+              
+      // Main content cards - pagination    
+      .main-content-marketplace
+        width 100%
+        padding  10px 20px
+        @media tablet
+          width  75%
+          padding  40px 20px
+        // Main heading content
+        .main-heading
+          width  100%
+          display  flex
+          flex-direction  column
+          gap  15px
+          // Main title
           .main-title 
             color color-first
+            font-size: font-s
+            @media tablet
+              font-size: font-m
+          // Main pagination buttons
           .main-pagination 
-            width: 100%
-            display: flex
-            justify-content: space-between
-            align-items: center
+            width  100%
+            display  flex
+            padding: 20px 0px
+            justify-content  space-between
+            align-items  center
+            flex-direction: column-reverse
+            gap 10px
+            @media movil
+              flex-direction: row
+
+            // Main pagination content
             .main-pagination-page
-              display: flex
-              width: fit-content
-              padding: 10px 20px
+              display  flex
+              width  fit-content
+              padding  5px 10px
+              @media tablet
+                padding  10px 20px
+              // Flex item pagination list
               .main-pagination-page-list
                 width 100%
                 height 100%
                 gap 10px
-                display: flex
+                display  flex
+                // Item list design
                 .main-pagination-page-list-item
-                  width 40px
-                  height: 40px
+                  width 32px
+                  height  32px
                   list-style none
-                  display: flex
-                  justify-content: center
-                  align-items: center
+                  display  flex
+                  justify-content  center
+                  align-items  center
                   border-radius 4px
-                  // background: linear-gradient(90deg, rgba(0,5,255,0.75) 0%, rgba(188,0,255,0.75) 60%, rgba(255,0,185,0.75) 100%);
-                  background: color-white
-                  -webkit-box-shadow: 0px 0px 5px 4px rgba(191,191,191,0.3);
-                  -moz-box-shadow: 0px 5px 1px 4px rgba(191,191,191,0.3);
-                  box-shadow: 0px 0px 5px 4px rgba(191,191,191,0.3);
+                  // background  linear-gradient(90deg, rgba(0,5,255,0.75) 0%, rgba(188,0,255,0.75) 60%, rgba(255,0,185,0.75) 100%) 
+                  background  color-white
+                  -webkit-box-shadow  0px 0px 5px 4px rgba(191,191,191,0.3) 
+                  -moz-box-shadow  0px 5px 1px 4px rgba(191,191,191,0.3) 
+                  box-shadow  0px 0px 5px 4px rgba(191,191,191,0.3) 
+                  @media tablet
+                    width 40px
+                    height  40px
+                  // Item content 
                   .main-pagination-page-list-item-content
-                    display: flex
-                    width: 100%
-                    height: 100%
-                    justify-content: center
-                    align-items: center
+                    display  flex
+                    width  100%
+                    height  100%
+                    justify-content  center
+                    align-items  center
                     color color-letter
-                    text-decoration: none
-                    font-weight: 500
-                    font-size: 12px
-          .main-pagination-orderby
-            width: fit-content
-            height: 100%
+                    text-decoration  none
+                    font-weight  500
+                    font-size  10px
+                    @media tablet
+                      font-size  12px
+          // Pagination order by
+          .main-pagination-content
             display: flex
-            justify-content: center
             align-items: center
-            gap 10px
-            select
-              position: relative
-              border none
-              color rgb(79, 79, 255)
-              font-family: fontfam1
-              background: color-white
-              option 
-                color: color-first
-                border: none
+            gap 20px
+            width: 100%
+            justify-content: space-between
+            flex-direction: column
+            @media movil-xs
+              gap 10px
+              flex-direction: row
 
+            @media movil
+              width: fit-content
+            .main-pagination-navigation
+              display: flex
+              justify-content: center
+              align-items: center
+              gap 10px
+              width: fit-content
+              .navigation-type,.navigation-filter
+                width: 32px
+                height: 32px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgb(79, 79, 255)
+                color color-white
+                border-radius 3px
+                gap 5px
+                font-size: 18px
+                img
+                  width:  80%
+                  height: 80%
+              .navigation-filter
+                width fit-content
+                padding: 0px 10px
+                font-size: 16px
+                display: flex
+                @media tablet
+                  display: none
+                span
+                  font-size: 12px
+
+
+            .main-pagination-orderby
+              width  fit-content
+              height  100%
+              display  flex
+              justify-content  center
+              align-items  center
+              gap 10px
+              position relative
+              // Label - Container
+              .label
+                position absolute
+                top -6px
+                display: flex
+                left 5px
+                z-index 2
+                background: color-white
+                width: fit-content
+                height: fit-content
+                padding: 0px 6px
+                align-items: flex-start
+                // Label - content
+                label
+                  width fit-content
+                  color color-letter
+                  font-size: font-xxs
+              // Input select design
+              select
+                position  relative
+                border none
+                width: fit-content
+                color rgb(79, 79, 255)
+                font-family  fontfam1
+                background  color-white
+                padding: 10px 15px 10px 5px
+                border 1px solid rgb(218, 218, 218)
+                border-radius 4px
+                @media tablet
+                  width: 180px
+                // Input select options design
+                option 
+                  width 100%
+                  color  color-first
+                  border  none
+        // main content - cards 
         .main-product
-          width: 100%
-          height: auto
-          padding: 40px 0px
+          width  100%
+          height  auto
+          padding  40px 0px
           position relative
-          justify-content: flex-start
-          //-slider de imágenes 
+          justify-content  flex-start
+          // Slider images
           .main-product__grid
-            position: relative
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            column-gap: 1.5rem;
-            row-gap: 1.5rem;
-            @media (min-width: 600px) 
-              grid-template-columns: repeat(2, 1fr);
-            @media (min-width: 1000px) 
-              grid-template-columns: repeat(3, 1fr);
+            position  relative
+            display  grid 
+            grid-template-columns  repeat(1, 1fr) 
+            column-gap  1.5rem 
+            row-gap  1.5rem 
+            @media (min-width  600px) 
+              grid-template-columns  repeat(2, 1fr) 
+            @media (min-width  1280px) 
+              grid-template-columns  repeat(3, 1fr) 
             .template-card 
-              position: relative
-              -webkit-box-shadow: 0px 0px 17px 4px rgba(191,191,191,0.3);
-              -moz-box-shadow: 0px 17px 1px 4px rgba(191,191,191,0.3);
-              box-shadow: 0px 0px 17px 4px rgba(191,191,191,0.3);
+              position  relative
+              -webkit-box-shadow  0px 0px 17px 4px rgba(191,191,191,0.3) 
+              -moz-box-shadow  0px 17px 1px 4px rgba(191,191,191,0.3) 
+              box-shadow  0px 0px 17px 4px rgba(191,191,191,0.3) 
               border-radius 20px
               .template-slider
-                width: 100%
-                height: 310px
-                margin-top: 0
+                width  100%
+                height  400px
+                margin-top  0
                 @media movil
-                  width: 100%
+                  width  100%
                 img
-                  width: 100%
-                  height: 100%
-                  object-fit: cover
+                  width  100%
+                  height  100%
+                  object-fit  cover
                   border-radius 10px
-              //-Titulo de la plantilla - precio y botón de acceso
+              // Template Title - price & access button
               .template-info
-                background: rgb(255, 255, 255)
-                background-size: 400% 400%;
-                animation: gradient 15s ease infinite;
+                background  rgb(255, 255, 255)
+                background-size  400% 400% 
+                animation  gradient 15s ease infinite 
                 z-index 0
-                position: absolute
-                width: 100%
-                height: 80px
+                position  absolute
+                width  100%
+                height  80px
                 bottom 0
                 left 0
-                display: flex
-                justify-content: space-between
-                align-items: center
-                border-end-end-radius: 10px
-                border-end-start-radius: 10px
-                padding: 0px 20px
+                display  flex
+                justify-content  space-between
+                align-items  center
+                border-end-end-radius  10px
+                border-end-start-radius  10px
+                padding  0px 20px
 
                 @keyframes gradient 
                   0% 
-                    background-position: 0% 50%;
+                    background-position  0% 50% 
                   50% 
-                    background-position: 100% 50%;
+                    background-position  100% 50% 
                   100% 
-                    background-position: 0% 50%;
+                    background-position  0% 50% 
                 .stars
-                  padding-top: 5px
+                  padding-top  5px
                   ul
-                    display: flex
-                    margin-left: 5px
+                    display  flex
+                    margin-left  5px
                     li
-                      list-style: none
+                      list-style  none
                       .fa-solid
                         color rgb(252, 193, 0)
                 .template-title,
@@ -850,30 +1056,88 @@ body
                     top 0
                     left 0
                     transform translate(-10%, 25%)
-                    opacity:1
+                    opacity 1
                     transition 0.25s
-                    background-color: color-first
-                    color: white;
-                    padding: 10px 20px;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                    font-size: 16px;
-                    cursor: pointer;
+                    background-color  color-first
+                    color  white 
+                    padding  10px 20px 
+                    text-align  center 
+                    text-decoration  none 
+                    display  inline-block 
+                    font-size  16px 
+                    cursor  pointer 
                     border-radius 4px
                     @media tablet
-                      opacity: 0
+                      opacity  0
                 .template-title
                   .button
-                    background: linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%);
+                    background  linear-gradient(90deg, rgba(0,23,255,0.742734593837535) 0%, rgba(255,0,189,1) 100%) 
                     transform translate(0%, -12.5%)
                 .price-button:hover .button
                 .template-title:hover .button
-                  background-color: #4CAF50
+                  background-color  #4CAF50
+
+//////////////////////////////////////////////////
+////////////////// Template //////////////////////
+//////////////////////////////////////////////////
+.template
+  width: 100%
+  height: 100%
+  .template-container
+    max-width 1280px
+    margin auto
+    padding 0px
+    .template-info
+      width: 100%
+      height 100%
+      
+      .template-info-card
+        .template-info-card-container
+          width: fit-content
+          background: #22161A;
+          padding: 20px 0px;
+          box-shadow: 0px 36px 23px #362f2f;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .basic, .pro
+            padding: 20px 40px;
+            color: #c7c7c7;
+          .basic
+            border-right: 1px solid #2D1F24;
+          h2
+            font-size: font-l;
+          h4
+            font-size: font-m;
+            margin-top: 0.8em;
+          h6
+            font-size: font-s;
+          ul
+            font-size: font-xs;
+            margin-top: 1em;
+            margin-left: 1em;
+            line-height: 1.5rem;
+
+          .basic-btn, .pro-btn
+            width: 100%;
+            border: none;
+            padding: 0.8em 1.5em;
+            margin: 2em 0 0 0;
+            background: #AF2830;
+            color: #f1f1f1;
+            font-size: 1.125rem;
+            border-radius: 5px;
+            cursor: pointer;
+          .basic-btn
+            background: transparent;
+            color: #AF2830;
+            border: 1px solid #AF2830;
+          
 
 
 
-            
+                  
 
 
           

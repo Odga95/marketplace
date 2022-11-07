@@ -1,0 +1,42 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  //- market content size
+  .main-header-template
+    input.input(type="text" id="fname" name="firstname" placeholder="Escribe una palabra clave")
+  .template
+    .template-container
+      .template-info
+        .template-info__image
+        .template-info-content
+          .template-info-content__category 
+          .template-info-content__title 
+          .template-info-content__date 
+          .template-info-content__author
+        .template-info-card
+          .template-info-card-container
+            .basic
+              h2 Basic
+              h4 Free
+              h6 3,000 monthly visitors
+              ul.basic-ul
+                li.basic-li Limited Reports
+                li.basic-li Unlimited Projects
+                li.basic-li Data storage for 1 year
+              button.basic-btn Start now
+            .pro
+              h2 Pro
+              h4 $19 / month
+              h6 10,000 monthly visitors
+              ul.pro-ul
+                li.pro-li Unlimited Reports
+                li.pro-li 15-day free trial
+                li.pro-li Data storage for 3 years
+              button.pro-btn Try it
+    .template-main
+
+block body-footer
+  include includes/footer

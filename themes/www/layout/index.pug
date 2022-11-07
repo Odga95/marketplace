@@ -6,7 +6,7 @@ block body-header
 block head-link
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 block body-main
-  .main-header
+  .main-header-template
     input.input(type="text" id="fname" name="firstname" placeholder="Escribe una palabra clave")
   //- Images links templates
   //- Cards
@@ -62,8 +62,8 @@ block body-main
             h2 Busca por - Categorias
           //- Botón a sección de las categorías
           .category-button
-            a(href="/").button Ver más...
-            a(href="/").text Ver más...
+            a(href="/marketplace").button Ver más...
+            a(href="/marketplace").text Ver más...
           //- Linea de división o separación del heading
         hr
         //- Sección de las categorías
@@ -141,7 +141,7 @@ block body-main
                         .fa-solid.fa-star.fa-xs
                       - n++
                     span  ㅤ(30)
-                a(href="/").button Ver plantilla
+                a(href="/marketplace").button Ver plantilla
               .price-button
                 .price (35,00 €)
                 a(href="/").button Buy
