@@ -11,11 +11,14 @@ block body-main
     .template-container
       .template-info
         .template-info__image
+          img(src="/img/plantilla2.jpg", alt="", srcset="")
         .template-info-content
-          .template-info-content__category 
-          .template-info-content__title 
-          .template-info-content__date 
-          .template-info-content__author
+          a(href="/template").template-info-content__category Deportes, Actividades
+          .template-info-content__title Sint ratione recusandae 
+          .template-info-content__date 10 Agost 2022
+          .template-info-content__author David Burbano
+          button.template-info-content__button Preview
+            img(src="/img/ico/layout1.svg", alt="", srcset="")
         .template-info-card
           .template-info-card-container
             .basic
@@ -36,7 +39,20 @@ block body-main
                 li.pro-li 15-day free trial
                 li.pro-li Data storage for 3 years
               button.pro-btn Try it
-    .template-main
+      .template-main
+        .template-main__tabs-list 
+          ul.tabs-list__container 
+            li.tab-item Descripción 
+            li.tab-item.tab-item__tab--select Opiniones
+            li.tab-item Resumen del producto
+            li.tab-item Desarrollador
+        
+    .template-main__tab-container
+            
+            
+            
+
+
 
 block body-footer
   include includes/footer
