@@ -11,14 +11,14 @@ block body-main
     .template-container
       .template-info
         .template-info__image
-          img(src="/img/plantilla2.jpg", alt="", srcset="")
+          img(src="/img/plantilla2.jpg" alt="" srcset="")
         .template-info-content
           a(href="/template").template-info-content__category Deportes, Actividades
           .template-info-content__title Sint ratione recusandae 
           .template-info-content__date 10 Agost 2022
           .template-info-content__author David Burbano
           button.template-info-content__button Preview
-            img(src="/img/ico/layout1.svg", alt="", srcset="")
+            img(src="/img/ico/layout1.svg" alt="" srcset="")
         .template-info-card
           .template-info-card-container
             .basic
@@ -40,19 +40,78 @@ block body-main
                 li.pro-li Data storage for 3 years
               button.pro-btn Try it
       .template-main
-        .template-main__tabs-list 
+        #tabs-list.template-main__tabs-list 
           ul.tabs-list__container 
-            li.tab-item Descripción 
-            li.tab-item.tab-item__tab--select Opiniones
-            li.tab-item Resumen del producto
-            li.tab-item Desarrollador
-        
+            li#description.tab-item.tab-select Descripción 
+            li#comments.tab-item Opiniones
+            li#resume.tab-item Resumen del producto
+            li#develop-detail.tab-item Desarrollador
+
     .template-main__tab-container
-            
-            
-            
+      .template-main__tab-content
 
+        //- Description Content
+        .tab-content__description.enabled 
+          //- Description side-left
+          .description-left
+            .description__title
+              h2.description__title--text Caracteristicas
+            ul.caracteristics-list
+              li.caracteristics-item Etiam a metus vehicula, consectetur nulla sed, mattis diam.
+              li.caracteristics-item Quisque vestibulum diam orci, a commodo mauris convallis at.
+              li.caracteristics-item  Praesent ultrices in erat ac elementum. 
+              li.caracteristics-item In condimentum ornare nunc quis porttitor.
+              li.caracteristics-item Etiam a metus vehicula, consectetur nulla sed, mattis diam.
+              li.caracteristics-item Quisque vestibulum diam orci, a commodo mauris convallis at.
+              li.caracteristics-item  Praesent ultrices in erat ac elementum. 
+              li.caracteristics-item In condimentum ornare nunc quis porttitor.
+            p.caracteristics-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab laborum nesciunt quaerat tempore dolores, nemo sint excepturi dolorum, atque cum ut tenetur maiores vero porro eos fugiat nulla repudiandae reprehenderit?
+            p.caracteristics-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab laborum nesciunt quaerat tempore dolores, nemo sint excepturi dolorum, atque cum ut tenetur maiores vero porro eos fugiat nulla repudiandae reprehenderit?
+          //- Description side-right
+          .description-right
+            .description__slider 
+              .slider 
+                .slider-img-container
+                  img.mySlide(src="/img/plantilla1.jpg")
+                  img.mySlide(src="/img/plantilla2.jpg")
+                  img.mySlide(src="/img/plantilla3.webp")
+                  img.mySlide(src="/img/plantilla4.jpg")
 
+                  .buttons-container
+                    button.slider-button(onclick="plusDivs(-1)") Prev
+                    button.slider-button(onclick="plusDivs(1)") Next
+          //- Description side-full width
+          .description-full 
+            .description__title
+              h2.description__title--text Resumen
+            ul.caracteristics-list
+              li.caracteristics-item Use of icon source material and SVG. (Get HD Look Any Devices)
+              li.caracteristics-item Support for multiple stores and multiple languages. (fully dynamic)
+              li.caracteristics-item Top speed driven theme. (Better caching and automatic file compression)
+              li.caracteristics-item Theme Unlimited Color Editor and manage the style and colors of the text. (Easy Look as you want)
+              li.caracteristics-item Easy configuration from BackOffice. (Premium Option)
+              li.caracteristics-item Maximum speed with each site needs more than 35 built-in modules. (Also get open sites at the speed of light)
+              li.caracteristics-item Automatically compress HTML code to run it quickly.
+              li.caracteristics-item Highest score in Gtmatrix. (Premium Code)
+              li.caracteristics-item my wish list
+              li.caracteristics-item compare product
+              li.caracteristics-item advanced blog
+              li.caracteristics-item Live Product Search
+              li.caracteristics-item Custom theme color
+              li.caracteristics-item Font changes.
+              li.caracteristics-item product zoom
+              li.caracteristics-item Other rich BackOffice features and customization.
+              li.caracteristics-item Explore the demo to show the features -> Like Rich Theme...
+            h2 Buy right now! 
+            .caracteristics-text Si tienes alguna duda o ayuda con el tema de configuración. por favor libre de contactarnos. 
+            .caracteristics-text Estamos encantados de ayudarle en cualquier momento :)
+        
+        //- Comments content
+        .tab-content__comments.disabled 
+        //- Resume content
+        .tab-content__resume.disabled 
+        //- Develop-detail (información del desarrollador) content
+        .tab-content__develop-detail.disabled 
 
 block body-footer
   include includes/footer
